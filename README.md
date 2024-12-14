@@ -1,0 +1,7 @@
+# Java PbD
+
+This project houses the source code for the Java Programming by Design textbook.
+
+Every effort has been made to keep the content simple to understand and is intended to be used with new learners.
+
+This content is released under the same CC-BY-NC-SA model as the textbook.
