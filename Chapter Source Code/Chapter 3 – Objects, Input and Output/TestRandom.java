@@ -10,7 +10,7 @@ public class TestRandom {
         // like Scanner we can use nextDouble() and nextInt()
         System.out.println("rnd.nextDouble() is " + rnd.nextDouble());
 
-        // six sided die roll.
+        // six-sided die roll.
         d6 = rnd.nextInt(6) + 1;
         System.out.println("d6 is " + d6);
 
