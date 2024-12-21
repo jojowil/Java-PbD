@@ -37,7 +37,5 @@ public class ConditionalStrings {
 
         System.out.println("\nr and s are equal based on equals().");
         System.out.println("r.equals(s) is " + r.equals(s));
-
     }
-
 }
