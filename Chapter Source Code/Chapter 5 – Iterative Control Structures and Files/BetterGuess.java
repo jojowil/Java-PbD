@@ -15,6 +15,7 @@ public class BetterGuess {
         System.out.println("I'm thinking of a number between 1 and 20.");
 
         found = false;
+        // while not found, guess within limit.
         while ( ! found && guessLimit > 0 ) {
             System.out.println("You have " + guessLimit + " guesses remaining.");
             System.out.print("Guess the value between 1 and 20: ");

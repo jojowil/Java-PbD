@@ -10,6 +10,7 @@ public class RangeWhile {
         int x, value;
         double avg;
 
+        // loop iterates from 1 to 3, inclusive.
         x = 1;    // initialization
         while ( x <= 3 ) {  // condition
             System.out.print("Enter value #" + x + ": ");

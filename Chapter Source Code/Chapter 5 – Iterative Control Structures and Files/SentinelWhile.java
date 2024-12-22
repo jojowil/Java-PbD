@@ -10,6 +10,7 @@ public class SentinelWhile {
         int x, value;
         double avg;
 
+        // prompt user an indicate how to end.
         System.out.print("Enter integers (-1 to end): ");
         value = kb.nextInt();    //initialization
         while ( value != -1 ) {  //condition
@@ -18,6 +19,7 @@ public class SentinelWhile {
             System.out.print("Enter integers (-1 to end): ");
             value = kb.nextInt();  //update
         }
+        // average calculated after loop is complete.
         avg = sum / (double)count;
 
         System.out.println("The sum is " + sum + ".");

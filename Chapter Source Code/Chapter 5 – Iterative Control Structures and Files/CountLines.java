@@ -9,6 +9,7 @@ public class CountLines {
         int count = 0;
         Scanner inFile = new Scanner(new FileReader("quotes.txt"));
 
+        // EOF loop to read and count lines.
         while ( inFile.hasNext() ) {
             line = inFile.nextLine();
             count++;

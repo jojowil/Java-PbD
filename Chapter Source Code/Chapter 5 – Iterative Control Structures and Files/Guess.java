@@ -14,6 +14,7 @@ public class Guess {
         System.out.println("I'm thinking of a number between 1 and 20.");
 
         found = false;
+        // while not found, guess forever.
         while ( ! found ) {
             System.out.print("Guess the value between 1 and 20: ");
             guess = kb.nextInt();

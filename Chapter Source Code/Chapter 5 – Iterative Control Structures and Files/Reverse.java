@@ -5,11 +5,12 @@ public class Reverse {
         String s = "Fox on the lawn.", rev;
         int x;
 
-        // pull each char from the String.
+        // pull each char from the String and show its position.
         for ( x = 0; x < s.length(); x++ )
             System.out.println("s.charAt(" + x + ") = " + s.charAt(x));
 
-        // Create the reverse of s.
+        // Create the reverse buiding a string working
+        // from the end back toward te beginning.
         rev = "";
         for ( x = s.length() - 1; x >= 0; x-- )
             rev = rev + s.charAt(x);

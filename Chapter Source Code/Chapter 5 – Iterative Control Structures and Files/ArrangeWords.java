@@ -10,6 +10,7 @@ public class ArrangeWords {
         int words = 0, lines = 0;
         Scanner inFile = new Scanner(new FileReader("quotes.txt"));
 
+        // EOF loop to read one word at a time.
         while ( inFile.hasNext() ) {
             word = inFile.next();
             System.out.print(word + " ");

@@ -10,12 +10,15 @@ public class Main {
         int count = 0, words = 0, totalWords=0;
         Scanner inFile = new Scanner(new FileReader("quotes.txt")), lineScanner;
 
+        // EOF loop to read lines.
         while ( inFile.hasNext() ) {
             line = inFile.nextLine();
             System.out.println(line);
             count++;
 
+            // Scanner for the line to read words in the String.
             lineScanner = new Scanner(line);
+            // for loop to count words as they're read from the line.
             for (words = 0; lineScanner.hasNext(); words++) {
                 word = lineScanner.next();
                 System.out.println(word);

@@ -26,6 +26,7 @@ public class ArrangeWords2 {
         size = allWords.size();
         System.out.println(size);
 
+        // iterate over the collected words.
         for (int x = 0; x < size; x++) {
             System.out.print(allWords.get(x) + " ");
 
