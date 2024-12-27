@@ -4,6 +4,10 @@ import java.sql.SQLException;
 
 public class DBSupport {
 
+    /**
+     * Gets a database connection
+     * @return a Connection object or null on error
+     */
     public static Connection getDBConn() {
         Connection mdb;
         String userName="ciss111p8", password="ciss111p8";
@@ -22,6 +26,11 @@ public class DBSupport {
         }
     }
 
+    /**
+     * Gets the open status of a Connection object.
+     * @param mdb the MySQL database object
+     * @return true if connection is open
+     */
     public static boolean getMysqlStatus(Connection mdb) {
         if ( mdb != null )
             try {
@@ -32,6 +41,10 @@ public class DBSupport {
         return false;
     }
 
+    /**
+     * Closes a database connection.
+     * @param mdb the Connection objet to be closed
+     */
     public static void closeDB(Connection mdb) {
         try {
             if ( mdb != null && !mdb.isClosed() )

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Project2 {
+public class Project3 {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         final double PI = 3.1415926;
