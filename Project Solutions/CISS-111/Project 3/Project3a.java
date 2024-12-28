@@ -33,6 +33,11 @@ public class Project3a {
         outFile.close();
     }
 
+    /**
+     * Kernighan model to count 1 bits.
+     * @param n value to be tested (can be negative)
+     * @return 1-bit count
+     */
     public static int countSetBits(int n){
         int count = 0;
         while (n != 0) {
@@ -42,6 +47,11 @@ public class Project3a {
         return count;
     }
 
+    /**
+     * Another model to count 1 bits as they're rotated out.
+     * @param value value to be tested
+     * @return 1-bit count
+     */
     int countOneBits(int value) {
         int count = 0;
         while (value) {
