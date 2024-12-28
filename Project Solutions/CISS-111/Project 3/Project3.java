@@ -17,7 +17,7 @@ public class Project3 {
             bit = pnum % 8;
 
             bitmap[byt] = (byte)(bitmap[byt] | (0x80 >>> bit));
-//	 System.out.printf("%d %d %d %x%n", pnum, byt, bit, bitmap[byt]);
+	        //System.out.printf("%d %d %d %x%n", pnum, byt, bit, bitmap[byt]);
         }
 
         for (byt = 0; byt < bitmap.length; byt++)
