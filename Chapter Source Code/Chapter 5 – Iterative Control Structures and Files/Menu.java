@@ -27,7 +27,7 @@ public class Menu {
             // decide what to do with the selection.
             switch (choice) {
                 // combined cases.
-                case 'C': case 'M': case 'T': case 'U': case 'Q':
+                case 'C', 'M', 'T', 'U', 'Q':
                     valid = true;
                     break;
                 default:

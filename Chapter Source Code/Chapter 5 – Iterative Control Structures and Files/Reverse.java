@@ -9,8 +9,8 @@ public class Reverse {
         for ( x = 0; x < s.length(); x++ )
             System.out.println("s.charAt(" + x + ") = " + s.charAt(x));
 
-        // Create the reverse buiding a string working
-        // from the end back toward te beginning.
+        // Create the reverse building a string working
+        // from the end back toward the beginning.
         rev = "";
         for ( x = s.length() - 1; x >= 0; x-- )
             rev = rev + s.charAt(x);
