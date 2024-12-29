@@ -1,4 +1,10 @@
 public class StringParam {
+
+    /**
+     * Method demonstrating pass by value.
+     * And String is immutable, so cannot be changed
+     * @param str
+     */
     public static void alterstring(String str) {
         // Creates new instance. Does not replace
         // characters of existing object.
@@ -12,9 +18,7 @@ public class StringParam {
 
         s = "String from main() method.";
         System.out.println("s = " + s);
-
         alterstring(s);
-
         System.out.println("s = " + s);
     }
 }

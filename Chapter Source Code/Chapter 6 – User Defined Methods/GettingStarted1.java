@@ -13,7 +13,10 @@ public class GettingStarted1 {
         return t;
     }
 
-    /* Main method */
+    /**
+     * Main method thats accepts an array of Strings.
+     * @param args Strings from the command line
+     */
     public static void main(String[] args) {
 
         int x;
