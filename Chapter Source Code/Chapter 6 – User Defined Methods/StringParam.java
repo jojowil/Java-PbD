@@ -5,7 +5,7 @@ public class StringParam {
      * And String is immutable, so cannot be changed
      * @param str
      */
-    public static void alterstring(String str) {
+    public static void alterString(String str) {
         // Creates new instance. Does not replace
         // characters of existing object.
         str = "String from alterstring() method!";
@@ -18,7 +18,7 @@ public class StringParam {
 
         s = "String from main() method.";
         System.out.println("s = " + s);
-        alterstring(s);
+        alterString(s);
         System.out.println("s = " + s);
     }
 }
