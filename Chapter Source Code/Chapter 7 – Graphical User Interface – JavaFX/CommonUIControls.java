@@ -65,7 +65,7 @@ public class CommonUIControls extends Application {
         vbox.setAlignment(Pos.CENTER);
         scene = new Scene(vbox, 300, 500);
 
-        // ang go!
+        // and go!
         primaryStage.setTitle("The Kitchen Sink!");
         primaryStage.setScene(scene);
         primaryStage.show();
