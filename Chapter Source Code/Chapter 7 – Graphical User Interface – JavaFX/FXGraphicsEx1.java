@@ -50,11 +50,9 @@ public class FXGraphicsEx1 extends Application {
         group.getChildren().add(rect);
 
         cir = new Circle(275, 245, 25);
-        //cir.setStroke(Color.YELLOW);
         group.getChildren().add(cir);
 
         cir = new Circle(125, 305, 25, Color.BLUE);
-        //cir.setStroke(Color.YELLOW);
         group.getChildren().add(cir);
 
         rect = new Rectangle(250, 280, 50, 50);
@@ -66,11 +64,5 @@ public class FXGraphicsEx1 extends Application {
         primaryStage.setTitle("FXGraphicsEx1");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-
-        // standard JavaFX Application object launch
-        launch(args);
     }
 }
