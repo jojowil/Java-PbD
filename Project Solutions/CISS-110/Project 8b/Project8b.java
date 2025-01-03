@@ -82,8 +82,4 @@ public class Project8b extends Application //implements EventHandler{
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
