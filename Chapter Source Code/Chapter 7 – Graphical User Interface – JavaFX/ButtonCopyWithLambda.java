@@ -41,20 +41,16 @@ public class ButtonCopyWithLambda extends Application {
         pane.add(btn, 1, 2);
         tfdst.setEditable(false);
 
-        btn.setOnAction( event -> {
+        // lambda expressoion where only the action is defined
+        btn.setOnAction(event -> {
             String s;
-
+            // all we do is copy the text from src to dst.
             s = tfsrc.getText();
             tfdst.setText(s);
         });
 
-        System.out.println(pane);
         primaryStage.setTitle("Button Event Lambda");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

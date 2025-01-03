@@ -43,23 +43,19 @@ public class ButtonCopyWithAnonClass extends Application {
         pane.add(btn, 1, 2);
         tfdst.setEditable(false);
 
+        // anonymous class with handle() method defined
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 String s;
-
+                // all we do is copy the text from src to dst.
                 s = tfsrc.getText();
                 tfdst.setText(s);
             }
         });
 
-        System.out.println(pane);
         primaryStage.setTitle("Button Event Inner Class");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

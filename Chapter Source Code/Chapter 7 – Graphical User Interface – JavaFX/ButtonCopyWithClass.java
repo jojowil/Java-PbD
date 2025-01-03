@@ -44,25 +44,24 @@ public class ButtonCopyWithClass extends Application {
         pane.add(btn, 1, 2);
         tfdst.setEditable(false);
 
+        // this is where we assign the handler
         btn.setOnAction(new ButtonHandler());
 
-        System.out.println(pane);
         primaryStage.setTitle("Button Event Class");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
+    /**
+     * Named class that implements the EventHandler
+     */
     private class ButtonHandler implements EventHandler<ActionEvent> {
         @Override
         public void handle(ActionEvent event) {
             String s;
-
+            // all we do is copy the text from src to dst.
             s = tfsrc.getText();
             tfdst.setText(s);
         }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
