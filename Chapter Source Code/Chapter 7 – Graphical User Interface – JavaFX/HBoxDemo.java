@@ -9,16 +9,15 @@ public class HBoxDemo extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // create HBox and add new objects
         HBox hb = new HBox(10, new Label("First Name:"), new TextField());
         Scene scene = new Scene(hb, 550, 70);
 
+        // add additional objects to HBox
         hb.getChildren().addAll(new Label("Last Name:"), new TextField());
+
+        // and go!
         primaryStage.setScene(scene);
-
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

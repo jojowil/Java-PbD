@@ -59,17 +59,15 @@ public class CommonUIControls extends Application {
         tb1.setToggleGroup(tg2);
         tb2.setToggleGroup(tg2);
 
+        // load up the VBox!
         vbox = new VBox(label, tf, button, pwl, pwf, rb1, rb2, rb3, cb1, cb2, tb1, tb2);
         vbox.setSpacing(20);
         vbox.setAlignment(Pos.CENTER);
         scene = new Scene(vbox, 300, 500);
 
+        // ang go!
         primaryStage.setTitle("The Kitchen Sink!");
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

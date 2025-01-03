@@ -15,9 +15,4 @@ public class BasicStage extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
-        // we still use main(), but it's only to call launch().
-        launch(args);
-    }
 }
