@@ -4,7 +4,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 
-public class JavaFXTemaplate extends Application {
+public class BasicStage extends Application {
 
     @Override
     public void start(Stage primaryStage) {
@@ -17,8 +17,7 @@ public class JavaFXTemaplate extends Application {
     }
 
     public static void main(String[] args) {
-
-        // standard JavaFX Application object launch
+        // we still use main(), but it's only to call launch().
         launch(args);
     }
 }
