@@ -17,8 +17,7 @@ public class JavaFXTemaplate extends Application {
     }
 
     public static void main(String[] args) {
-
-        // standard JavaFX Application object launch
+        // we still use main(), but it's only to call launch().
         launch(args);
     }
 }
