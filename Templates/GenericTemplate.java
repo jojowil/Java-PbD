@@ -1,12 +1,12 @@
 /**
  * Uncomment the two lines for Scanner support.
- * The two println() calls are not required, but serve as a reminder
+ * The two println() calls are not required but serve as a reminder
  * that execution begins in the main() methiod.
  */
 
 //import java.util.Scanner;
 
-public class ProgramTemplate {
+public class GenericTemplate {
 
     //static Scanner kb = new Scanner(System.in);
 
@@ -17,5 +17,4 @@ public class ProgramTemplate {
 
         System.out.println("My program is ending!");
     }
-
 }
