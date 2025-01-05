@@ -1,5 +1,12 @@
 public class PersonRecord2 {
 
+    /**
+     * Person as a record with toString.
+     *
+     * @param givenName first name as a string
+     * @param surname last name as a string
+     * @param age age as an int
+     */
     public record Person (String givenName, String surname, int age) {
         @Override
         public String toString() {
@@ -20,6 +27,5 @@ public class PersonRecord2 {
         System.out.println(first + "\n");
 
         System.out.println("givenName = " + gn + "\nsurname = " + sn + "\nage = " + a);
-
     }
 }
