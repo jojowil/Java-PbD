@@ -9,8 +9,8 @@ public class InsertionSort {
             t = arr[x];
             y = x;
 
-            while ( y > 0 && t < arr[y-1]) {
-                arr[y] = arr[y-1];
+            while (y > 0 && t < arr[y - 1]) {
+                arr[y] = arr[y - 1];
                 //print_debug(arr, x, y);
                 y--;
             }
@@ -21,7 +21,7 @@ public class InsertionSort {
         }
     }
 
-    public static void print_debug(int[] a, int x, int y){
+    public static void print_debug(int[] a, int x, int y) {
         // Not part of sort routine.
         // Only used to print debug info!
 
@@ -34,9 +34,8 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int x, a[] = {2, 21, 27, 35, 10, 25, 47, 45, 37, 19, 15, 50, 16, 12, 0, 42, 44, 6, 20, 9};
+        int a[] = {2, 21, 27, 35, 10, 25, 47, 45, 37, 19, 15, 50, 16, 12, 0, 42, 44, 6, 20, 9};
 
         insertionSort(a);
-
     }
 }

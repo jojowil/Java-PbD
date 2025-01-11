@@ -7,19 +7,16 @@ public class StressSort {
         boolean swapped;
 
         do {
-            // no swap yet
             swapped = false;
 
             for ( int x = 1; x < arr.length; x++) {
                 if ( arr[x] < arr[x-1] ) {
-                    // swap values!
                     int t = arr[x];
                     arr[x] = arr[x-1];
                     arr[x-1] = t;
                     swapped = true;
                 }
             }
-
         } while (swapped);
     }
 
@@ -55,7 +52,6 @@ public class StressSort {
             t = arr[min];
             arr[min] = arr[x];
             arr[x] = t;
-
         }
     }
 
@@ -173,24 +169,27 @@ public class StressSort {
     }
 
     public static void qsort1(int[] arr, int l, int u) {
-        int m, x, t;
+        int p, x, t;
 
-        if ( l >= u )
+        if (l >= u)
             return;
-        m = l;
-        for (x = l+1; x <= u; x++) {
-            if ( arr[x] < arr[l] ) {
-                m++;
-                t = arr[m];
-                arr[m] = arr[x];
+        p = l; // pivot begins at lower bound
+        for (x = l + 1; x <= u; x++) {
+            if (arr[x] < arr[l]) {
+                p++;
+                // swap
+                t = arr[p];
+                arr[p] = arr[x];
                 arr[x] = t;
             }
         }
+        // swap
         t = arr[l];
-        arr[l] = arr[m];
-        arr[m] = t;
-        qsort1(arr, l, m-1);
-        qsort1(arr, m+1, u);
+        arr[l] = arr[p];
+        arr[p] = t;
+
+        qsort1(arr, l, p - 1);
+        qsort1(arr, p + 1, u);
     }
 
     public static void main(String[] args)
