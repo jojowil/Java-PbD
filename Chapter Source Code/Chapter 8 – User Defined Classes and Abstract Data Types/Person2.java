@@ -54,6 +54,7 @@ public class Person2 {
 
     /**
      * sets the given name
+     *
      * @param s given name as a string
      * @return this object
      */
@@ -64,6 +65,7 @@ public class Person2 {
 
     /**
      * sets the surname
+     *
      * @param s surname as a string
      * @return this object
      */
@@ -74,6 +76,7 @@ public class Person2 {
 
     /**
      * set the age
+     *
      * @param y age as an int
      * @return this object
      */
@@ -96,9 +99,9 @@ public class Person2 {
      * @return boolean equality
      */
     public boolean equals(Person2 otherPerson) {
-        return ( ( age == otherPerson.age) &&
-                ( givenName.compareToIgnoreCase(otherPerson.givenName) == 0 ) &&
-                ( surname.compareToIgnoreCase(otherPerson.surname) == 0 ) );
+        return ((age == otherPerson.age) &&
+                (givenName.compareToIgnoreCase(otherPerson.givenName) == 0) &&
+                (surname.compareToIgnoreCase(otherPerson.surname) == 0));
     }
 
     /**
@@ -130,9 +133,10 @@ public class Person2 {
 
     /**
      * built-in exerciser
-     * @param args from command line
+     *
+     * @param args from the command line
      */
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         Person2 firstPerson;
         Person2 secondPerson;

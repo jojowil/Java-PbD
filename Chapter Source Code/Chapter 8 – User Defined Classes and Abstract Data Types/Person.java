@@ -133,7 +133,7 @@ public class Person {
     /**
      * built-in exerciser
      *
-     * @param args from command line
+     * @param args from the command line
      */
     public static void main(String[] args) {
 
