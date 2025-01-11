@@ -1,18 +1,30 @@
 public class UsingArrays3 {
 
-    // Dump the array. Make it pretty.
-    public static void dumpArray (int[] array) {
+    /**
+     * Display a pretty array dump.
+     *
+     * @param array integer array
+     */
+    public static void dumpArray(int[] array) {
 
         int x, l = array.length;
 
         System.out.print("[ ");
-        for ( x = 0 ; x < l - 1 ; x++ )
+        for (x = 0; x < l - 1; x++)
             System.out.print(array[x] + ", ");
 
-        System.out.println(array[l-1] + " ]");
+        System.out.println(array[l - 1] + " ]");
 
     }
-    // Delete the number at pos.
+
+    /**
+     * Delete the number at pos.
+     *
+     * @param array integer array
+     * @param inuse number of values in use
+     * @param pos   position to be removed
+     * @return new in use count
+     */
     public static int delete(int[] array, int inuse, int pos) {
 
     /*
@@ -44,19 +56,27 @@ public class UsingArrays3 {
         /* if pos is out of bounds or there are no
          * items in the array, it is an error.
          */
-        if ( pos > inuse || pos < 0 || inuse == 0 )
+        if (pos > inuse || pos < 0 || inuse == 0)
             return -1;
 
         // Note: if pos == inuse, no move happens.
         // Also, if pos == 0 and inuse == 1,
         // no move happens.
-        for ( x = pos; x < inuse - 1; x++)
-            array[x] = array[x+1];
+        for (x = pos; x < inuse - 1; x++)
+            array[x] = array[x + 1];
 
         return inuse - 1;
     }
 
-    // Insert val at pos.
+    /**
+     * Insert a value at pos.
+     *
+     * @param array integer array
+     * @param inuse number of values in use
+     * @param pos   position to be removed
+     * @param val   value to be inserted
+     * @return new in use count
+     */
     public static int insert(int[] array, int inuse, int pos, int val) {
 
     /*
@@ -89,13 +109,13 @@ public class UsingArrays3 {
          * of the array.
          * If pos is out of bounds, it is an error.
          */
-        if ( inuse == array.length || pos > inuse + 1
-                || pos > array.length || pos < 0 )
+        if (inuse == array.length || pos > inuse + 1
+                || pos > array.length || pos < 0)
             return -1;
 
         // Note:
-        for ( x = inuse - 1; x >= pos; x--)
-            array[x+1] = array[x];
+        for (x = inuse - 1; x >= pos; x--)
+            array[x + 1] = array[x];
 
         array[pos] = val;
         return inuse + 1;
@@ -106,8 +126,8 @@ public class UsingArrays3 {
         int x, ia[] = new int[10], inuse = ia.length, result;
 
         // Populate array with 10 random numbers
-        for ( x = 0; x < ia.length; x++ )
-            ia[x] = (int)(Math.random() * 100 + 1);
+        for (x = 0; x < ia.length; x++)
+            ia[x] = (int) (Math.random() * 100 + 1);
 
         System.out.println("Original array.");
         dumpArray(ia);
@@ -116,9 +136,8 @@ public class UsingArrays3 {
         dumpArray(ia);
         System.out.println("\nInserting a zero at index 5.");
         result = insert(ia, inuse, 5, 0);
-        if (result != -1 )
+        if (result != -1)
             inuse = result;
         dumpArray(ia);
     }
-
 }

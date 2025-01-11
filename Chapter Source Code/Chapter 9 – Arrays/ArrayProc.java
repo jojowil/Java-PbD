@@ -4,11 +4,15 @@ public class ArrayProc {
 
     static Scanner kb = new Scanner(System.in);
 
+    /**
+     * Print the array contents.
+     *
+     * @param a array of ints.
+     */
     public static void printArray(int[] a) {
         int x, len = a.length;
-        for (x = 0; x < len; x++) {
+        for (x = 0; x < len; x++)
             System.out.printf("Value at index %d is %d%n", x, a[x]);
-        }
     }
 
     public static void main(String[] args) {

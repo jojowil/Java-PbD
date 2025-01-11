@@ -2,21 +2,26 @@ import java.util.Arrays;
 
 public class ArrayCopy {
 
+    /**
+     * Initializes the array back to zeroes.
+     *
+     * @param a array of ints.
+     */
     public static void resetArray(int[] a) {
-
         int x;
         for ( x = 0; x < a.length; x++)
             a[x] = 0;
     }
 
+    /**
+     * Print the array contents.
+     *
+     * @param a array of ints.
+     */
     public static void printArray(int[] a) {
-
         int x, len = a.length;
         for (x = 0; x < len; x++)
-        {
-            System.out.println("Value at index " + x + " is " + a[x]);
-        }
-
+            System.out.printf("Value at index %d is %d%n", x, a[x]);
     }
 
     public static void main(String[] args) {
@@ -40,7 +45,7 @@ public class ArrayCopy {
 
         printArray(ia2);
 
-        // deep copy with arraycopy()
+        // deep copy with System.arraycopy()
         resetArray(ia2);
         System.out.println("\nUsing System.arraycopy()");
         System.arraycopy(ia1, 0, ia2, 0, ia1.length);
@@ -50,13 +55,12 @@ public class ArrayCopy {
         System.out.println("\nBefore shallow copy");
         System.out.println("ia1 hash = " + System.identityHashCode(ia1));
         System.out.println("ia2 hash = " + System.identityHashCode(ia2));
-
         ia2 = ia1;
         System.out.println("\nAfter shallow copy");
         System.out.println("ia1 hash = " + System.identityHashCode(ia1));
         System.out.println("ia2 hash = " + System.identityHashCode(ia2));
 
-        // Use Arrays.copyOf() ­ JDK 6
+        // Use Arrays.copyOf()
         System.out.println("\nUsing Arrays.copyOf() with ia1.length*2");
         ia2 = Arrays.copyOf(ia1, ia1.length * 2);
         printArray(ia2);

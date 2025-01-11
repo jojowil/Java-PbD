@@ -1,6 +1,11 @@
 public class UsingArrays1 {
 
-    // Sum all values in array.
+    /**
+     * Method to sum the complete array.
+     *
+     * @param array integer array
+     * @return integer sum
+     */
     public static int sum(int[] array) {
 
         int x, sum = 0;
@@ -11,7 +16,13 @@ public class UsingArrays1 {
         return sum;
     }
 
-    // Sum all the values inuse in array.
+    /**
+     * Methods to sum only the values in use.
+     *
+     * @param array integer array
+     * @param inuse number of values used
+     * @return
+     */
     public static int sum(int[] array, int inuse) {
 
         int x, sum = 0;
@@ -50,6 +61,5 @@ public class UsingArrays1 {
         System.out.println("\nThe sum of random numbers is " + sum);
         System.out.println("The call to sum(ia) returns " + sum(ia));
         System.out.println("The call to sum(ia, inuse) returns " + sum(ia, inuse));
-
     }
 }

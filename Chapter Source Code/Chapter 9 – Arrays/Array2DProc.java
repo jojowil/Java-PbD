@@ -4,6 +4,11 @@ public class Array2DProc {
 
     static Scanner kb = new Scanner(System.in);
 
+    /**
+     * Print the array contents.
+     *
+     * @param a array of ints.
+     */
     public static void printArray2d(int[][] a) {
         int row, col;
         for (row = 0; row < a.length; row++) {
@@ -52,8 +57,7 @@ public class Array2DProc {
                 sum = sum + array[row][col];
             avg = sum / array[row].length;
 
-            System.out.printf("The average of row %d is %.2f\n",
-                    row, avg);
+            System.out.printf("The average of row %d is %.2f\n", row, avg);
         }
     }
 }
