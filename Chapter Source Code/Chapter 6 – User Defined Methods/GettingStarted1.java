@@ -2,6 +2,7 @@ public class GettingStarted1 {
 
     /**
      * Method to compute a sum
+     *
      * @param a int value to be summed
      * @param b another int value to be summed
      * @return the sum of a and b
@@ -15,6 +16,7 @@ public class GettingStarted1 {
 
     /**
      * Main method thats accepts an array of Strings.
+     *
      * @param args Strings from the command line
      */
     public static void main(String[] args) {
@@ -22,7 +24,7 @@ public class GettingStarted1 {
         int x;
 
         /* sum invoked here. */
-        x = sum(2,5);
+        x = sum(2, 5);
         System.out.println("The sum of 2 and 5 is " + x);
     }
 }

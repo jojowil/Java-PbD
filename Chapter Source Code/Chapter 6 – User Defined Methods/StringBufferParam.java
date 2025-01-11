@@ -3,6 +3,7 @@ public class StringBufferParam {
     /**
      * Method demonstrating pass by value, but this time the
      * reference passed is a mutable object!
+     *
      * @param str
      */
     public static void alterString(StringBuffer str) {

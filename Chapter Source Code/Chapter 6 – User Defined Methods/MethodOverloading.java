@@ -2,6 +2,7 @@ public class MethodOverloading {
 
     /**
      * Prints an error to stderr
+     *
      * @param errstr Error message to be printed
      */
     public static void print_error(String errstr) {
@@ -17,19 +18,21 @@ public class MethodOverloading {
 
     /**
      * Return random number 1-100 inclusive
+     *
      * @return int random number
      */
     public static int get_random() {
-        return (int)(Math.random()*100 + 1);
+        return (int) (Math.random() * 100 + 1);
     }
 
     /**
      * Return random number 1-top inclusive
+     *
      * @param top max value for the random number
      * @return int random number
      */
     public static int get_random(int top) {
-        return (int)(Math.random()*top + 1);
+        return (int) (Math.random() * top + 1);
     }
 
     public static void main(String[] args) {

@@ -3,6 +3,7 @@ public class StringParam {
     /**
      * Method demonstrating pass by value.
      * And String is immutable, so cannot be changed
+     *
      * @param str
      */
     public static void alterString(String str) {
