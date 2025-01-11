@@ -1,7 +1,7 @@
 public class PersonRecord1 {
 
     /**
-     * Person as a record. all fields are immutable.
+     * Person as a record. All fields are immutable.
      *
      * @param givenName first name as a string
      * @param surname   last name as a string
