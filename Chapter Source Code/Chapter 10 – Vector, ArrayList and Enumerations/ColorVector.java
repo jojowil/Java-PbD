@@ -27,8 +27,13 @@ public class ColorVector {
         rainbow.add(3, "Green");
         System.out.println(rainbow);
 
+        System.out.println();
         len = rainbow.size();
-        for ( x = 0; x < len; x++)
+        for (x = 0; x < len; x++)
             System.out.println("Value at index " + x + " is " + rainbow.get(x));
+
+        System.out.println();
+        for (String s : rainbow)
+            System.out.println(s);
     }
 }

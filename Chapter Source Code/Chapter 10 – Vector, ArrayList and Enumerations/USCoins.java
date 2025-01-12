@@ -4,14 +4,25 @@ public class USCoins {
 
     public enum Coins {
 
-        Penny (0.01), Nickel (0.05), Dime (0.10), Quarter (0.25),
+        Penny(0.01), Nickel(0.05), Dime(0.10), Quarter(0.25),
         HalfDollar(0.50);
 
         private final double value;
+
+        /**
+         * Contructor!
+         *
+         * @param value double value to be assigned to the coin
+         */
         private Coins(double value) {
             this.value = value;
         }
 
+        /**
+         * Get the value of the coin.
+         *
+         * @return double value
+         */
         public double getValue() {
             return value;
         }
@@ -28,12 +39,12 @@ public class USCoins {
         double pocketValue = 0.0;
 
         // from 1 to 10 random coins in our pocket.
-        numCoins = (int)(Math.random() * 10 + 1);
+        numCoins = (int) (Math.random() * 10 + 1);
         System.out.printf("There are %d coins in our pocket.%n", numCoins);
 
         // add a random coin
         for (x = 0; x < numCoins; x++) {
-            randomCoin = (int)(Math.random() * definedCoins.length);
+            randomCoin = (int) (Math.random() * definedCoins.length);
             pocket.add(definedCoins[randomCoin]);
         }
 

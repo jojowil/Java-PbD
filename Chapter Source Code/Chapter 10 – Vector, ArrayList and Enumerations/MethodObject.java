@@ -5,24 +5,29 @@ import java.util.LinkedList;
 
 public class MethodObject {
 
-    public static void checkType(List<?> l) {
+    /**
+     * Check the type of List
+     *
+     * @param list unbounded List type
+     */
+    public static void checkType(List<?> list) {
 
         // use instanceof to determine type.
-        if ( l instanceof Vector )
-            System.out.print("Vector has size " + l.size() + " and capacity " + ((Vector)l).capacity());
-        else if ( l instanceof ArrayList )
-            System.out.print("ArrayList has size " + l.size() + " and unknown capacity");
+        if (list instanceof Vector)
+            System.out.print("Vector has size " + list.size() + " and capacity " + ((Vector) list).capacity());
+        else if (list instanceof ArrayList)
+            System.out.print("ArrayList has size " + list.size() + " and unknown capacity");
         else
-            System.out.print("Cannot use " + l.getClass());
+            System.out.print("Cannot use " + list.getClass());
 
-        System.out.println(" with contents " + l);
+        System.out.println(" with contents " + list);
     }
 
     public static void main(String[] args) {
 
         Vector<Integer> v = new Vector<>(20);
         ArrayList<Integer> a = new ArrayList<>(20);
-        LinkedList<Integer> ll = new LinkedList<>();
+        LinkedList<Integer> l = new LinkedList<>();
 
         v.add(36);
         v.add(42);
@@ -32,8 +37,8 @@ public class MethodObject {
         a.add(42);
         checkType(a);
 
-        ll.add(36);
-        ll.add(42);
-        checkType(ll);
+        l.add(36);
+        l.add(42);
+        checkType(l);
     }
 }
