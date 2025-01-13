@@ -1,8 +1,19 @@
 import java.util.Scanner;
 
+class DataFormatException extends Exception {
+    public DataFormatException() {
+        super("Data must contain at least one colon");
+    }
+
+    public DataFormatException(String msg) {
+        super(msg);
+    }
+}
+
 public class ExceptTest {
 
     static Scanner kb = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         String s;
@@ -13,15 +24,13 @@ public class ExceptTest {
             try {
                 s = kb.nextLine();
                 pos = s.indexOf(":");
-                if ( pos == -1 )
+                if (pos == -1)
                     throw new DataFormatException();
                 else
                     System.out.println("The value entered is " + s);
-            }
-            catch (DataFormatException dfeRef) {
+            } catch (DataFormatException dfeRef) {
                 System.out.println(dfeRef);
-            }
-            catch (Exception eRef) {
+            } catch (Exception eRef) {
                 System.out.println(eRef);
             }
             System.out.println("\nEnter data with at least one colon:");
