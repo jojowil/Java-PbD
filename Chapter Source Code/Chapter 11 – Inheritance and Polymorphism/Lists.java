@@ -7,10 +7,10 @@ public class Lists {
     public static void main(String[] args) {
         List<String> l;
 
-        l = new Vector<String>( Arrays.asList("red", "bed", "led"));
+        l = new Vector<String>(Arrays.asList("red", "bed", "led"));
         System.out.println(l);
 
-        l = new ArrayList<String>( Arrays.asList("abc", "def", "ghi"));
+        l = new ArrayList<String>(Arrays.asList("abc", "def", "ghi"));
         System.out.println(l);
     }
 }

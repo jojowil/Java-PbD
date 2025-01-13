@@ -5,7 +5,14 @@ public class Car {
     private boolean hatchback;
     protected String make;
 
-    public Car (String make, int doors, boolean hatchback) {
+    /**
+     * One constructor to specify certain features.
+     *
+     * @param make      String value for make
+     * @param doors     an int number of doors
+     * @param hatchback indicating if it's a hatchback
+     */
+    public Car(String make, int doors, boolean hatchback) {
         this.make = make;
         this.doors = doors;
         this.hatchback = hatchback;
@@ -33,9 +40,7 @@ public class Car {
 
     @Override
     public String toString() {
-        String hb=" with hatchback.";
-        if (!hatchback)
-            hb = ".";
+        String hb = hatchback ? " with hatchback." : ".";
         return make + " " + doors + " door" + hb;
     }
 }
