@@ -1,8 +1,14 @@
 public class FibIter {
 
+    /**
+     * Iterative Fibonacci
+     *
+     * @param n the nth number
+     * @return int result
+     */
     public static int fib(int n) {
 
-        if ( n < 0 )
+        if (n < 0)
             throw new IllegalArgumentException("Value cannot be negative.");
 
         int previous = -1;
@@ -16,7 +22,7 @@ public class FibIter {
         return current;
     }
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         System.out.println(fib(46));
     }
 }
