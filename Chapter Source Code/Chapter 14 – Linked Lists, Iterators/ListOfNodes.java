@@ -16,7 +16,11 @@ public class ListOfNodes {
 
     public static Scanner kb = new Scanner(System.in);
 
-    // Dump nodes pointed to by l
+    /**
+     * Dump nodes pointed to by list
+     *
+     * @param list
+     */
     public static void dumplist(Node list) {
         Node p;
 
@@ -29,8 +33,8 @@ public class ListOfNodes {
         System.out.println();
     }
 
-    public static void main (String[] args) {
-        Node head=null, n;
+    public static void main(String[] args) {
+        Node head = null, n;
         String w;
 
         System.out.print("Enter a word: ");
