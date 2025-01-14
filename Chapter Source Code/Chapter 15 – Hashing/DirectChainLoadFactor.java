@@ -1,15 +1,20 @@
 public class DirectChainLoadFactor {
 
+    /* Hash wrapper */
+    public static int hash(String s, int b) {
+        return KnR_2nd(s, b);
+    }
+
     /* K&R 1st edition Hash */
     public static int KnR_1st(String s, int b) {
 
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = h + s.charAt(x);
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -21,10 +26,10 @@ public class DirectChainLoadFactor {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = (h << 5) - h + s.charAt(x); // h * 31 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -54,13 +59,12 @@ public class DirectChainLoadFactor {
             buckets = new Node[numBuckets];
         }
 
-        // The KnR_2nd() method is a hash function described later.
         public void put(String s) {
 
-            if ( !REHASH && ((double)count / numBuckets) > .75)
+            if (!REHASH && ((double) count / numBuckets) > .75)
                 rehash();
 
-            int b = KnR_2nd(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node n = new Node(s);
 
             if (get(s))
@@ -72,11 +76,11 @@ public class DirectChainLoadFactor {
         }
 
         public boolean get(String s) {
-            int b = KnR_2nd(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node p = buckets[b];
 
             while (p != null) {
-                if ( p.data.equals(s) )
+                if (p.data.equals(s))
                     return true;
                 p = p.next;
             }
@@ -84,20 +88,20 @@ public class DirectChainLoadFactor {
         }
 
         public void remove(String s) {
-            int b = KnR_2nd(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node p = buckets[b];
 
             // empty
-            if ( p == null )
+            if (p == null)
                 return;
             // head of chain
-            if ( p.data.equals(s) )
+            if (p.data.equals(s))
                 buckets[b] = p.next;
             else {
                 // seek the value
-                Node cur = p.next, back=p;
-                while ( cur != null ) {
-                    if ( cur.data.equals(s) ) {
+                Node cur = p.next, back = p;
+                while (cur != null) {
+                    if (cur.data.equals(s)) {
                         back.next = cur.next;
                         break;
                     }
@@ -118,9 +122,9 @@ public class DirectChainLoadFactor {
             buckets = new Node[numBuckets];
             count = 0;
 
-            for ( int x = 0; x < oldBuckets.length; x++) {
+            for (int x = 0; x < oldBuckets.length; x++) {
                 Node p = oldBuckets[x];
-                while (p != null ) {
+                while (p != null) {
                     put(p.data);
                     p = p.next;
                 }
@@ -151,11 +155,11 @@ public class DirectChainLoadFactor {
     public static void main(String[] args) {
 
         final int BUCKETS = 8;
-        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3","192.168.3.1",
+        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3", "192.168.3.1",
                 "192.168.1.6", "192.168.6.1", "192.168.1.2", "192.168.2.1"};
         HashTable ht = new HashTable(BUCKETS);
 
-        for ( String w : words )
+        for (String w : words)
             ht.put(w);
 
         System.out.println(ht);

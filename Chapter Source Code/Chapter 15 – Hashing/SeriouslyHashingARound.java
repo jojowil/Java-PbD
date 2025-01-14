@@ -6,10 +6,10 @@ public class SeriouslyHashingAround {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = h + s.charAt(x);
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h;
@@ -21,10 +21,10 @@ public class SeriouslyHashingAround {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = (h << 5) - h + s.charAt(x); // h * 31 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h;
@@ -36,10 +36,10 @@ public class SeriouslyHashingAround {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = (h << 6) + (h << 16) - h + s.charAt(x); // h * 65599 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h;
@@ -55,14 +55,14 @@ public class SeriouslyHashingAround {
     /* Dan Bernstein's djb2 Hash starting at 5381 with 33 multiplier. */
     public static int djb2_Bernstein(String s) {
 
-        int h=5381;
+        int h = 5381;
         int x, l = s.length();
 
         h = 0;
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = ((h << 5) + h) + s.charAt(x); // h * 33 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h;
@@ -73,7 +73,7 @@ public class SeriouslyHashingAround {
         final int BUCKETS = 181;
         String[] words = {"XYLOPHONE", "POTATO", "BOOTPRINT", "RING", "Ring", "ring", "COMMIT"};
 
-        for ( String w : words ) {
+        for (String w : words) {
             // change the hash function to see how things move around.
             int h = sdbm(w);
             int b = h % BUCKETS;

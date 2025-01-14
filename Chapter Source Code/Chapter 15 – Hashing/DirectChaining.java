@@ -1,15 +1,20 @@
 public class DirectChaining {
 
+    /* Hash wrapper */
+    public static int hash(String s, int b) {
+        return KnR_2nd(s, b);
+    }
+
     /* K&R 1st edition Hash */
     public static int KnR_1st(String s, int b) {
 
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = h + s.charAt(x);
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -21,10 +26,10 @@ public class DirectChaining {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = (h << 5) - h + s.charAt(x); // h * 31 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -53,9 +58,8 @@ public class DirectChaining {
             buckets = new Node[numBuckets];
         }
 
-        // The KnR_2nd() method is a hash function described later.
         public void put(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node n = new Node(s);
 
             if (get(s))
@@ -67,11 +71,11 @@ public class DirectChaining {
         }
 
         public boolean get(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node p = buckets[b];
 
             while (p != null) {
-                if ( p.data.equals(s) )
+                if (p.data.equals(s))
                     return true;
                 p = p.next;
             }
@@ -79,20 +83,20 @@ public class DirectChaining {
         }
 
         public void remove(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
             Node p = buckets[b];
 
             // empty
-            if ( p == null )
+            if (p == null)
                 return;
             // head of chain
-            if ( p.data.equals(s) )
+            if (p.data.equals(s))
                 buckets[b] = p.next;
             else {
                 // seek the value
-                Node cur = p.next, back=p;
-                while ( cur != null ) {
-                    if ( cur.data.equals(s) ) {
+                Node cur = p.next, back = p;
+                while (cur != null) {
+                    if (cur.data.equals(s)) {
                         back.next = cur.next;
                         break;
                     }
@@ -125,11 +129,11 @@ public class DirectChaining {
     public static void main(String[] args) {
 
         final int BUCKETS = 11;
-        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3","192.168.3.1",
+        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3", "192.168.3.1",
                 "192.168.1.6", "192.168.6.1"};
         HashTable ht = new HashTable(BUCKETS);
 
-        for ( String w : words )
+        for (String w : words)
             ht.put(w);
 
         System.out.println(ht);

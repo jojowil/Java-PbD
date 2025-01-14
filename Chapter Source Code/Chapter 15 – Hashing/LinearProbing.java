@@ -1,15 +1,20 @@
 public class LinearProbing {
 
+    /* Hash wrapper */
+    public static int hash(String s, int b) {
+        return KnR_1st(s, b);
+    }
+
     /* K&R 1st edition Hash */
     public static int KnR_1st(String s, int b) {
 
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = h + s.charAt(x);
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -21,10 +26,10 @@ public class LinearProbing {
         int h = 0;
         int x, l = s.length();
 
-        for ( x = 0; x < l; x++ )
+        for (x = 0; x < l; x++)
             h = (h << 5) - h + s.charAt(x); // h * 31 + c
 
-        if ( h < 0 )
+        if (h < 0)
             h = -h;
 
         return h % b;
@@ -42,7 +47,7 @@ public class LinearProbing {
         }
 
         public void put(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
             System.out.print(s + " hashed to bucket " + b + ". ");
             while (b < numBuckets && buckets[b] != null)
                 b++;
@@ -56,9 +61,9 @@ public class LinearProbing {
         }
 
         public boolean get(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
             while (b < numBuckets && buckets[b] != null) {
-                if ( ! buckets[b].equals(s))
+                if (!buckets[b].equals(s))
                     return true;
                 b++;
             }
@@ -66,10 +71,10 @@ public class LinearProbing {
         }
 
         public void remove(String s) {
-            int b = KnR_1st(s, numBuckets);
+            int b = hash(s, numBuckets);
 
             while (b < numBuckets && buckets[b] != null) {
-                if ( buckets[b].equals(s)) {
+                if (buckets[b].equals(s)) {
                     buckets[b] = null;
                     count--;
                     return;
@@ -89,11 +94,11 @@ public class LinearProbing {
     public static void main(String[] args) {
 
         final int BUCKETS = 11;
-        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3","192.168.3.1",
+        String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3", "192.168.3.1",
                 "192.168.1.6", "192.168.6.1"};
         HashTable ht = new HashTable(BUCKETS);
 
-        for ( String w : words )
+        for (String w : words)
             ht.put(w);
 
         System.out.println(ht);

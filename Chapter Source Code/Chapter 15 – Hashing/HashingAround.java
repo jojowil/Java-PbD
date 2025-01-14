@@ -1,4 +1,10 @@
 public class HashingAround {
+    /**
+     * Hash a string
+     *
+     * @param s string to be hashed
+     * @return hash value
+     */
     public static int hashValue(String s) {
 
         int h = 0;
