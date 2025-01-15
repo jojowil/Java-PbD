@@ -15,7 +15,7 @@ public class IntStack {
         }
     }
 
-    public IntStack () {
+    public IntStack() {
         top = null;
         size = 0;
     }
@@ -39,7 +39,7 @@ public class IntStack {
     // remove item from the top and return the removed value.
     public int pop() {
         int v;
-        if ( isEmpty() )
+        if (isEmpty())
             throw new EmptyStackException();
         v = top.data;
         top = top.next;
@@ -52,7 +52,7 @@ public class IntStack {
         Node p = top;
         String s = "";
 
-        while ( p != null ) {
+        while (p != null) {
             s = s + p.data + "\n";
             p = p.next;
         }
@@ -67,5 +67,26 @@ public class IntStack {
     // method to return the number of frames
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        IntStack s = new IntStack();
+
+        s.push(7);
+        s.push(5);
+        s.push(3);
+        System.out.println("Stack length is " + s.size());
+        System.out.println("Stack contains:\n" + s);
+
+        while (!s.isEmpty()) {
+            System.out.println("Popped " + s.pop());
+        }
+
+        // intentionally try to pop an empty stack
+        try {
+            System.out.println("Popped " + s.pop());
+        } catch (EmptyStackException e) {
+            System.out.println("That could have been bad!");
+        }
     }
 }

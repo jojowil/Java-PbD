@@ -15,7 +15,7 @@ public class IntQueue {
         }
     }
 
-    public IntQueue () {
+    public IntQueue() {
         first = null;
         last = null;
         size = 0;
@@ -45,11 +45,11 @@ public class IntQueue {
     public int deq() {
         int v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = first.data;
         first = first.next;
-        if ( first == null )
+        if (first == null)
             last = null;
         size--;
         return v;
@@ -61,11 +61,11 @@ public class IntQueue {
         String s;
 
         s = "FIRST ->";
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.next;
         }
-        s = s +"<- LAST\n";
+        s = s + "<- LAST\n";
         return s;
     }
 
@@ -77,5 +77,26 @@ public class IntQueue {
     // method to return the number of queue entries
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        IntQueue q = new IntQueue();
+
+        q.enq(7);
+        q.enq(5);
+        q.enq(3);
+        System.out.print("Queue contains:\n" + q);
+        System.out.println("Queue length is " + q.size());
+
+        while (!q.isEmpty()) {
+            System.out.println("Dequeued " + q.deq());
+        }
+
+        // intentionally try to deq an empty queue
+        try {
+            System.out.println("Dequeued " + q.deq());
+        } catch (NoSuchElementException e) {
+            System.out.println("That could have been bad!");
+        }
     }
 }

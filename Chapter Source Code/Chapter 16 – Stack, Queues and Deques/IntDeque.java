@@ -16,7 +16,7 @@ public class IntDeque {
         }
     }
 
-    public IntDeque () {
+    public IntDeque() {
         first = null;
         last = null;
         size = 0;
@@ -72,12 +72,12 @@ public class IntDeque {
     public int removeFirst() {
         int v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = first.data;
         // advance and null the prev link.
         first = first.next;
-        if (first != null )
+        if (first != null)
             first.prev = null;
         else
             last = null;
@@ -89,12 +89,12 @@ public class IntDeque {
     public int removeLast() {
         int v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = last.data;
         // advance and null the prev link.
         last = last.prev;
-        if ( last != null )
+        if (last != null)
             last.next = null;
         else
             first = null;
@@ -108,19 +108,19 @@ public class IntDeque {
         String s;
 
         s = "FIRST ->";
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.next;
         }
-        s = s +"<- LAST\n";
+        s = s + "<- LAST\n";
 
         s = s + "LAST ->";
         p = last;
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.prev;
         }
-        s = s +"<- FIRST\n";
+        s = s + "<- FIRST\n";
 
         return s;
     }
@@ -133,5 +133,49 @@ public class IntDeque {
     // method to return the number of queue entries
     public int size() {
         return size;
+    }
+
+    public static void main(String[] args) {
+        IntDeque d = new IntDeque();
+        int x;
+
+        d.addLast(7);
+        d.addLast(5);
+        d.addLast(3);
+        d.addFirst(13);
+        d.addFirst(15);
+        d.addFirst(17);
+        System.out.print("Deque contains:\n" + d);
+        System.out.println("Deque length is " + d.size());
+
+        x = 0;
+        while (x < 3) {
+            System.out.println("Dequeued from front " + d.removeFirst());
+            x++;
+        }
+
+        System.out.print("Deque contains:\n" + d);
+
+        x = 0;
+        while (x < 3) {
+            System.out.println("Dequeued from end " + d.removeLast());
+            x++;
+        }
+
+        System.out.print("Deque contains:\n" + d);
+
+        // intentionally try to deq an empty deqque
+        try {
+            System.out.println("Dequeued from front " + d.removeFirst());
+        } catch (NoSuchElementException e) {
+            System.out.println("That could have been bad!");
+        }
+
+        // intentionally try to deq an empty deque
+        try {
+            System.out.println("Dequeued fron end " + d.removeLast());
+        } catch (NoSuchElementException e) {
+            System.out.println("That could have been bad!");
+        }
     }
 }
