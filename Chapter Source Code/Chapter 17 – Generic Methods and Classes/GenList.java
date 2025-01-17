@@ -5,13 +5,14 @@ public class GenList<T> {
     private class Node {
         private T data;
         private Node next;
+
         private Node(T item) {
             data = item;
             next = null;
         }
     }
 
-    public GenList () {
+    public GenList() {
         head = null;
     }
 
@@ -46,16 +47,15 @@ public class GenList<T> {
         Node p = head;
 
         // first data value is alone.
-        if ( p != null ) {
+        if (p != null) {
             o += p.data;
             p = p.next;
         }
         // remaining data values have ", value"
-        while ( p != null ) {
+        while (p != null) {
             o += ", " + p.data;
             p = p.next;
         }
         return o + "]";
     }
 }
-
