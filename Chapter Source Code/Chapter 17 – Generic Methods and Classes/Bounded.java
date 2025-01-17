@@ -15,9 +15,9 @@ public class Bounded {
     }
 
     public static void main(String[] args) {
-        int a=10, b=15;
-        double f=4.01, g=3.14;
-        String s="ZZZ", t="abd";
+        int a = 10, b = 15;
+        double f = 4.01, g = 3.14;
+        String s = "ZZZ", t = "abd";
 
         System.out.println(min(a, b) + " is smaller than " + max(a, b));
         System.out.println(min(f, g) + " is smaller than " + max(f, g));

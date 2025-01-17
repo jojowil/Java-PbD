@@ -4,7 +4,7 @@ public class CloneEx1 {
         String s; // immutable String
         int a, b; // primitive types
 
-        public MyClass (String s, int a, int b) {
+        public MyClass(String s, int a, int b) {
             this.s = s;
             this.a = a;
             this.b = b;
@@ -15,8 +15,7 @@ public class CloneEx1 {
 
             try {
                 dup = (MyClass) super.clone();
-            }
-            catch (CloneNotSupportedException e) {
+            } catch (CloneNotSupportedException e) {
                 return null;
             }
 

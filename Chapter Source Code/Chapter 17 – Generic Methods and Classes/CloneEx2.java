@@ -4,7 +4,7 @@ public class CloneEx2 {
         String s; // immutable String
         int ia[]; // array class object
 
-        public MyClass (String s, int len) {
+        public MyClass(String s, int len) {
             this.s = s;
             ia = new int[len];
         }
@@ -15,8 +15,7 @@ public class CloneEx2 {
             try {
                 dup = (MyClass) super.clone();
                 dup.ia = (int[]) ia.clone();
-            }
-            catch (CloneNotSupportedException e) {
+            } catch (CloneNotSupportedException e) {
                 return null;
             }
 
