@@ -15,7 +15,7 @@ public class GenStack<T> {
         }
     }
 
-    public GenStack () {
+    public GenStack() {
         top = null;
         size = 0;
     }
@@ -39,7 +39,7 @@ public class GenStack<T> {
     // remove item from the top and return the removed value.
     public T pop() {
         T v;
-        if ( isEmpty() )
+        if (isEmpty())
             throw new EmptyStackException();
         v = top.data;
         top = top.next;
@@ -52,7 +52,7 @@ public class GenStack<T> {
         Node p = top;
         String s = "";
 
-        while ( p != null ) {
+        while (p != null) {
             s = s + p.data + "\n";
             p = p.next;
         }
@@ -79,7 +79,7 @@ public class GenStack<T> {
         System.out.println("Stack length is " + s.size());
         System.out.println("Stack contains:\n" + s);
 
-        while (! s.isEmpty()) {
+        while (!s.isEmpty()) {
             System.out.println("Popped " + s.pop());
         }
 

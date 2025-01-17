@@ -16,7 +16,7 @@ public class GenDeque<T> {
         }
     }
 
-    public GenDeque () {
+    public GenDeque() {
         first = null;
         last = null;
         size = 0;
@@ -72,12 +72,12 @@ public class GenDeque<T> {
     public T removeFirst() {
         T v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = first.data;
         // advance and null the prev link.
         first = first.next;
-        if (first != null )
+        if (first != null)
             first.prev = null;
         else
             last = null;
@@ -89,12 +89,12 @@ public class GenDeque<T> {
     public T removeLast() {
         T v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = last.data;
         // advance and null the prev link.
         last = last.prev;
-        if ( last != null )
+        if (last != null)
             last.next = null;
         else
             first = null;
@@ -108,19 +108,19 @@ public class GenDeque<T> {
         String s;
 
         s = "FIRST ->";
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.next;
         }
-        s = s +"<- LAST\n";
+        s = s + "<- LAST\n";
 
         s = s + "LAST ->";
         p = last;
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.prev;
         }
-        s = s +"<- FIRST\n";
+        s = s + "<- FIRST\n";
 
         return s;
     }
@@ -150,7 +150,7 @@ public class GenDeque<T> {
         System.out.println("Deque length is " + d.size());
 
         x = 0;
-        while ( x < 3 ) {
+        while (x < 3) {
             System.out.println("Dequeued from front " + d.removeFirst());
             x++;
         }
@@ -158,18 +158,10 @@ public class GenDeque<T> {
         System.out.print("Deque contains:\n" + d);
 
         x = 0;
-        while ( x < 3 ) {
+        while (x < 3) {
             System.out.println("Dequeued from end " + d.removeLast());
             x++;
         }
-
-    /*
-    x = 0;
-    while ( x < 3 ) {
-      System.out.println("Dequeued from front " + d.removeFirst());
-      x++;
-    }
-    */
 
         System.out.print("Deque contains:\n" + d);
 

@@ -15,7 +15,7 @@ public class GenQueue<T> {
         }
     }
 
-    public GenQueue () {
+    public GenQueue() {
         first = null;
         last = null;
         size = 0;
@@ -45,11 +45,11 @@ public class GenQueue<T> {
     public T deq() {
         T v;
 
-        if ( isEmpty() )
+        if (isEmpty())
             throw new NoSuchElementException();
         v = first.data;
         first = first.next;
-        if ( first == null )
+        if (first == null)
             last = null;
         size--;
         return v;
@@ -61,11 +61,11 @@ public class GenQueue<T> {
         String s;
 
         s = "FIRST ->";
-        while ( p != null ) {
+        while (p != null) {
             s = s + " " + p.data + " ";
             p = p.next;
         }
-        s = s +"<- LAST\n";
+        s = s + "<- LAST\n";
         return s;
     }
 
@@ -89,7 +89,7 @@ public class GenQueue<T> {
         System.out.print("Queue contains:\n" + q);
         System.out.println("Queue length is " + q.size());
 
-        while (! q.isEmpty()) {
+        while (!q.isEmpty()) {
             System.out.println("Dequeued " + q.deq());
         }
 
