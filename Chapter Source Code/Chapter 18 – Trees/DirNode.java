@@ -12,7 +12,7 @@ public class DirNode {
     public DirNode(String name, boolean dir) {
         this.name = name;
         this.dir = dir;
-        if ( dir )
+        if (dir)
             this.children = new ArrayList<DirNode>();
     }
 
@@ -68,7 +68,7 @@ public class DirNode {
                     return list.remove(n);
                 else if (dir) {
                     // remove an empty directory
-                    if ( n.isDir() && n.children.size() == 0)
+                    if (n.isDir() && n.children.size() == 0)
                         return list.remove(n);
                 }
             }
@@ -131,7 +131,7 @@ public class DirNode {
             return false;
 
         if (obj instanceof DirNode) {
-            if (((DirNode)obj).getName().equals(this.name))
+            if (((DirNode) obj).getName().equals(this.name))
                 return true;
         }
 
@@ -148,8 +148,8 @@ public class DirNode {
 
     public String fullPath() {
         DirNode p = this;
-        String path="";
-        if ( p.parent == null)
+        String path = "";
+        if (p.parent == null)
             return "/";
 
         while (p != null) {

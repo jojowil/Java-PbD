@@ -31,7 +31,7 @@ public class Directories {
                         dst = parts[1];
                         // determine if we can remove
                         DirNode c = cwd.getChild(dst);
-                        if ( c == null )
+                        if (c == null)
                             System.out.println("Object \"" + dst + "\" does not exist.");
                         else if (!c.isDir())
                             System.out.println("Object \"" + dst + "\" is not a directory.");
@@ -67,12 +67,11 @@ public class Directories {
                     case "cd":
                         if (parts.length == 1)
                             cwd = fs.getRoot();
-                        else if ( parts[1].equals("..")) {
+                        else if (parts[1].equals("..")) {
                             cwd = cwd.getParent();
-                        }
-                        else {
+                        } else {
                             dst = parts[1];
-                            if ( cwd.hasChild(dst)) {
+                            if (cwd.hasChild(dst)) {
                                 DirNode d = cwd.getChild(dst);
                                 if (d.isDir())
                                     cwd = d;

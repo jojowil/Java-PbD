@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.NoSuchElementException;
 
 public class IntTree {
 
@@ -9,7 +9,7 @@ public class IntTree {
         int data;
         Node left, right;
 
-        public Node (int item) {
+        public Node(int item) {
             data = item;
             left = null;
             right = null;
@@ -32,7 +32,7 @@ public class IntTree {
                 p = p.right;
         }
 
-        if (back == null )
+        if (back == null)
             root = n;
         else {
             if (back.data > item)
@@ -47,8 +47,8 @@ public class IntTree {
         Node tdb, tbdback = null, back = null, p = root, temp;
 
         // find the node to delete.
-        while ( p != null ) {
-            if ( p.data == item )
+        while (p != null) {
+            if (p.data == item)
                 break;
             back = p;
             if (p.data > item)
@@ -58,7 +58,7 @@ public class IntTree {
         }
 
         // not found - nothing to do
-        if ( p == null )
+        if (p == null)
             throw new NoSuchElementException();
 
         // save our place
@@ -66,9 +66,9 @@ public class IntTree {
         tdb = p;
 
         // Case of 0 or 1 child
-        if ( p.right == null )
+        if (p.right == null)
             p = p.left;
-        else if ( p.left == null )
+        else if (p.left == null)
             p = p.right;
             // two children
         else {
@@ -76,21 +76,21 @@ public class IntTree {
             back = p;
 
             // find largest value less than one being deleted
-            while ( temp.right != null ) {
+            while (temp.right != null) {
                 back = temp;
                 temp = temp.right;
             }
             // move the data
             p.data = temp.data;
             // relink tree removing the node used for replacement
-            if ( back == p )
+            if (back == p)
                 back.left = temp.left;
             else
                 back.right = temp.left;
         }
 
         // were we deleting the root?
-        if ( tdb == root )
+        if (tdb == root)
             root = p;
         else if (tbdback.left == tdb)
             tbdback.left = p;
@@ -118,10 +118,10 @@ public class IntTree {
 
     private void prettytree2(Node r, int i) {
         String s = "";
-        if ( r == null && i == 0 )
+        if (r == null && i == 0)
             System.out.println("EMPTY");
 
-        if ( r != null ) {
+        if (r != null) {
             prettytree2(r.right, i + 4);
             for (int x = 0; x < i; x++)
                 s = s + " ";
@@ -136,7 +136,7 @@ public class IntTree {
     }
 
     public static void inorder2(Node r) {
-        if ( r != null ) {
+        if (r != null) {
             inorder2(r.left);
             System.out.print(r.data + " ");
             inorder2(r.right);
@@ -148,7 +148,7 @@ public class IntTree {
     }
 
     private void preorder2(Node r) {
-        if ( r != null ) {
+        if (r != null) {
             System.out.print(r.data + " ");
             preorder2(r.left);
             preorder2(r.right);
@@ -161,7 +161,7 @@ public class IntTree {
     }
 
     private void postorder2(Node r) {
-        if ( r != null ) {
+        if (r != null) {
             postorder2(r.left);
             postorder2(r.right);
             System.out.print(r.data + " ");
@@ -171,8 +171,8 @@ public class IntTree {
     public static void main(String[] args) {
         int x;
         IntTree tree = new IntTree();
-        int[] in = {9,3,5,7,11,1,75,68,70};
-        int[] out = {7,68,75,3,9,11};
+        int[] in = {9, 3, 5, 7, 11, 1, 75, 68, 70};
+        int[] out = {7, 68, 75, 3, 9, 11};
 
         /*
          * The data sets up a tree to test removal of nodes with
