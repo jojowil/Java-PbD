@@ -9,7 +9,7 @@ public class ArrangeWords2 {
 
         String word;
         int count = 0, lines = 0, size;
-        ArrayList allWords = new ArrayList();
+        ArrayList<String> allWords = new ArrayList<>();
         Scanner inFile = new Scanner(new FileReader("quotes.txt"));
 
         // read each word and add to ArrayList
