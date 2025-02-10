@@ -1,7 +1,7 @@
 /**
  * Uncomment the two lines for Scanner support.
  * The two println() calls are not required but serve as a reminder
- * that execution begins in the main() methiod.
+ * that execution begins in the main() method.
  */
 
 //import java.util.Scanner;
