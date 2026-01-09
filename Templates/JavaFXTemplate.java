@@ -4,7 +4,7 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 
-public class JavaFXTemaplate extends Application {
+public class JavaFXTemplate extends Application {
 
     @Override
     public void start(Stage primaryStage) {
