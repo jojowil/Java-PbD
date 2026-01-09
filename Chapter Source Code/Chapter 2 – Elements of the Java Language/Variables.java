@@ -1,7 +1,6 @@
 public class Variables {
 
-    public static void main (String[] args) {
-
+    public static void main(String[] args) {
         // declaring some ints and a double.
         int test1, test2, test3, sum;
         double average;

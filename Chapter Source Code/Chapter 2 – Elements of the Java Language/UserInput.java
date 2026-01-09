@@ -5,7 +5,6 @@ public class UserInput {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         int test1, test2, test3;
         double average;
 
