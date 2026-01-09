@@ -35,7 +35,7 @@ public class IterableList implements Iterable<Integer> {
         }
     }
 
-    public IterableList () {
+    public IterableList() {
         head = null;
     }
 
@@ -65,21 +65,20 @@ public class IterableList implements Iterable<Integer> {
 
     @Override
     public String toString() {
-        String o = "[";
-        Iterator iter = iterator();
+        StringBuilder o = new StringBuilder("[");
+        Iterator<Integer> iter = iterator();
 
         // first data value is alone.
-        if ( iter.hasNext() )
-            o += iter.next();
+        if (iter.hasNext())
+            o.append(iter.next());
         // remaining data values have ", value"
-        while ( iter.hasNext() )
-            o += ", " + iter.next();
+        while (iter.hasNext())
+            o.append(", ").append(iter.next());
 
         return o + "]";
     }
 
     public static void main(String args[]) {
-
         IterableList il = new IterableList();
 
         System.out.println("Adding values...\n" + il);
@@ -93,7 +92,7 @@ public class IterableList implements Iterable<Integer> {
         System.out.println(il);
 
         System.out.println("\nUsing a for-each loop to print values...");
-        for ( int i : il )
+        for (int i : il)
             System.out.println(i);
 
         // Remove a middle.

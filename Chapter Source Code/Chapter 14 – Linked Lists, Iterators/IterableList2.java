@@ -1,17 +1,17 @@
 import java.util.Iterator;
 
-public class IterableList2 implements Iterable {
+public class IterableList2 implements Iterable<Integer> {
     private Node head;
 
     // This is the requirement of implementing Iterable. Provide
     // an iterator() method that returns an Iterator object.
-    public Iterator iterator() {
+    public Iterator<Integer> iterator() {
         return new LLIterator();
     }
 
     // This is what the iterator() returns to the caller.
     // This is the iterator object that processes the list.
-    private class LLIterator implements Iterator {
+    private class LLIterator implements Iterator<Integer> {
     /* We are using three pointers to be able to delete the node
        of the currently returned value.
     */
@@ -94,7 +94,7 @@ public class IterableList2 implements Iterable {
 
     public void delete(int item) {
 
-        Iterator iter = iterator();
+        Iterator<Integer> iter = iterator();
 
         while ( iter.hasNext() )
             if ( item == iter.next() ) {
@@ -105,20 +105,20 @@ public class IterableList2 implements Iterable {
 
     @Override
     public String toString() {
-        String o = "[";
-        Iterator iter = iterator();
+        StringBuilder o = new StringBuilder("[");
+        Iterator<Integer> iter = iterator();
 
         // first data value is alone.
         if ( iter.hasNext() )
-            o += iter.next();
+            o.append(iter.next());
         // remaining data values have ", value"
         while ( iter.hasNext() )
-            o += ", " + iter.next();
+            o.append(", ").append(iter.next());
 
         return o + "]";
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         IterableList2 il = new IterableList2();
 
@@ -150,4 +150,3 @@ public class IterableList2 implements Iterable {
         System.out.println(il);
     }
 }
-

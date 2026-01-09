@@ -95,7 +95,6 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-
         LinkedList ll = new LinkedList();
 
         System.out.println("\nAdding 35, 78, 45 and 0 to the list");
