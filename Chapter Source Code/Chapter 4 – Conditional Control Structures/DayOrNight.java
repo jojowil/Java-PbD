@@ -7,7 +7,7 @@ public class DayOrNight {
         sunShining = true;
 
         // basic condition test
-        if ( sunShining == true )
+        if (sunShining == true)
             daytime = true;
         else
             daytime = false;
