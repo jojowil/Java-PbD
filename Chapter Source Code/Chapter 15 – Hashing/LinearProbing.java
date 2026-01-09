@@ -2,12 +2,11 @@ public class LinearProbing {
 
     /* Hash wrapper */
     public static int hash(String s, int b) {
-        return KnR_1st(s, b);
+        return KnR_1st(s) % b;
     }
 
     /* K&R 1st edition Hash */
-    public static int KnR_1st(String s, int b) {
-
+    public static int KnR_1st(String s) {
         int h = 0;
         int x, l = s.length();
 
@@ -17,12 +16,11 @@ public class LinearProbing {
         if (h < 0)
             h = -h;
 
-        return h % b;
+        return h;
     }
 
     /* K&R 2nd edition Hash */
-    public static int KnR_2nd(String s, int b) {
-
+    public static int KnR_2nd(String s) {
         int h = 0;
         int x, l = s.length();
 
@@ -32,11 +30,10 @@ public class LinearProbing {
         if (h < 0)
             h = -h;
 
-        return h % b;
+        return h;
     }
 
     static class HashTable {
-
         private String[] buckets;
         private int numBuckets;
         private int count = 0;
@@ -84,15 +81,14 @@ public class LinearProbing {
         }
 
         public String toString() {
-            String s = "Hash Table: size " + count + ", buckets " + numBuckets + ":\n";
+            StringBuilder s = new StringBuilder("Hash Table: size " + count + ", buckets " + numBuckets + ":\n");
             for (int x = 0; x < numBuckets; x++)
-                s += "bucket[" + x + "] -> " + buckets[x] + "\n";
-            return s;
+                s.append("bucket[").append(x).append("] -> ").append(buckets[x]).append("\n");
+            return s.toString();
         }
     }
 
     public static void main(String[] args) {
-
         final int BUCKETS = 11;
         String[] words = {"192.168.10.2", "192.168.2.10", "192.168.1.3", "192.168.3.1",
                 "192.168.1.6", "192.168.6.1"};
