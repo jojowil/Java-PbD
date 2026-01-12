@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 public class ArrangeWords2 {
 
     public static void main(String[] args) throws FileNotFoundException {
-
         String word;
         int count = 0, lines = 0, size;
         ArrayList<String> allWords = new ArrayList<>();

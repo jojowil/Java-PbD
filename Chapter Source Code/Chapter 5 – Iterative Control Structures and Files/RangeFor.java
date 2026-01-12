@@ -5,7 +5,6 @@ public class RangeFor {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         int sum = 0;
         int x, value;
         double avg;

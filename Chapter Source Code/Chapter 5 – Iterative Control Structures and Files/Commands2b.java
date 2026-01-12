@@ -5,7 +5,6 @@ public class Commands2b {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         String line, cmd;
         int space, start;
 

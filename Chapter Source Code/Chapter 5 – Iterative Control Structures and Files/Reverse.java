@@ -1,7 +1,6 @@
 public class Reverse {
 
     public static void main(String[] args) {
-
         String s = "Fox on the lawn.", rev;
         int x;
 
@@ -18,6 +17,5 @@ public class Reverse {
         // print both original and reverse.
         System.out.println("\n" + s);
         System.out.println(rev);
-
     }
 }

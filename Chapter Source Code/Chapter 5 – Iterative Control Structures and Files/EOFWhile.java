@@ -5,7 +5,6 @@ public class EOFWhile {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         String line;
 
         // prompt here to prep for the loop.

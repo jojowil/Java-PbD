@@ -7,7 +7,6 @@ public class CommandsLong {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         String line, cmd;
         int space;
 
@@ -16,7 +15,6 @@ public class CommandsLong {
 
         System.out.print("cmd> ");
         while (kb.hasNext()) {
-
             line = kb.nextLine();
 
             // look for a space

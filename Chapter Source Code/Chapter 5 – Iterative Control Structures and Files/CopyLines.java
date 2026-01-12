@@ -6,7 +6,6 @@ import java.io.PrintWriter;
 public class CopyLines {
 
     public static void main(String[] args) throws FileNotFoundException {
-
         String line;
         // setup input and output files.
         Scanner inFile = new Scanner(new FileReader("quotes.txt"));

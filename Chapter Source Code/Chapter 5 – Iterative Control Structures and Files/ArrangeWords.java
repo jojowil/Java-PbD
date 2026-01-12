@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 public class ArrangeWords {
 
     public static void main(String[] args) throws FileNotFoundException {
-
         String word;
         int words = 0, lines = 0;
         Scanner inFile = new Scanner(new FileReader("quotes.txt"));

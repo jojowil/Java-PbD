@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Guess {
 
     static Scanner kb = new Scanner(System.in);
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
         int randomNumber, guess;
         boolean found;
 

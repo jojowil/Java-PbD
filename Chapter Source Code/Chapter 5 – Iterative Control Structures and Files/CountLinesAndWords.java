@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 public class CountLinesAndWords {
 
     public static void main(String[] args) throws FileNotFoundException {
-
         String line, word;
         int count = 0, words = 0, totalWords=0;
         Scanner inFile = new Scanner(new FileReader("quotes.txt")), lineScanner;

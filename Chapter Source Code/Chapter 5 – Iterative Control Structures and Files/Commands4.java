@@ -6,21 +6,18 @@ public class Commands4 {
 
     static Scanner kb = new Scanner(System.in);
     static String[] cmds = { "copy", "delete", "storage", "volume", "vserver", "help" };
-    static ArrayList<String> clist = new ArrayList<String>(Arrays.asList(cmds));
+    static ArrayList<String> clist = new ArrayList<>(Arrays.asList(cmds));
 
     public static void main(String[] args) {
-
         String line, cmd;
-        int space;
         String[] parts;
 
         System.out.print("cmd> ");
         while (kb.hasNext()) {
 
             line = kb.nextLine();
-            space = line.indexOf(' ');
             // treat consecutive spaces as one.
-            parts = line.split("[ ]+");
+            parts = line.split("\\s+");
             cmd = parts[0];
 
             // Is this a valid command?

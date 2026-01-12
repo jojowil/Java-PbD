@@ -5,7 +5,6 @@ public class Commands3 {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         String line, cmd;
         String[] parts;
 

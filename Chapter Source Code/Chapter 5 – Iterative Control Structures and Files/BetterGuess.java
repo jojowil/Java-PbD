@@ -5,13 +5,11 @@ public class BetterGuess {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         int randomNumber, guess, guessLimit=5;
         boolean found;
 
         // random number between 1 and 20
         randomNumber = (int)(Math.random() * 20 + 1);
-
         System.out.println("I'm thinking of a number between 1 and 20.");
 
         found = false;
