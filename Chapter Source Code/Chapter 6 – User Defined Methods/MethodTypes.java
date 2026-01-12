@@ -53,5 +53,4 @@ public class MethodTypes {
         System.out.printf("%d\n", power(2, 10));
         print_error("something terrible");
     }
-
 }

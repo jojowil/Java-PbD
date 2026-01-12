@@ -36,11 +36,9 @@ public class MethodOverloading {
     }
 
     public static void main(String[] args) {
-
         System.out.printf("%d%n", get_random());
         System.out.printf("%d%n", get_random(50));
         print_error();
         print_error("something terrible");
-
     }
 }

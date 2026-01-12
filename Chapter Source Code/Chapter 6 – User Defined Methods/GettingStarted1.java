@@ -8,19 +8,17 @@ public class GettingStarted1 {
      * @return the sum of a and b
      */
     public static int sum(int a, int b) {
-
         int t;
         t = a + b;
         return t;
     }
 
     /**
-     * Main method thats accepts an array of Strings.
+     * Main method that accepts an array of Strings.
      *
      * @param args Strings from the command line
      */
     public static void main(String[] args) {
-
         int x;
 
         /* sum invoked here. */
