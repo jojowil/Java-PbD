@@ -1,7 +1,6 @@
 public class DayOrNight2 {
 
     public static void main(String[] args) {
-
         boolean daytime, nighttime, sunShining;
 
         sunShining = true;

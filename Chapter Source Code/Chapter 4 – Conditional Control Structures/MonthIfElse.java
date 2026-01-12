@@ -5,7 +5,6 @@ public class MonthIfElse {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         int month;
         String monthStr;
 

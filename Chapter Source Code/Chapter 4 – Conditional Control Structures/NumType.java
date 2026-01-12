@@ -4,7 +4,6 @@ public class NumType {
 
     static Scanner kb = new Scanner(System.in);
     public static void main(String[] args) {
-
         int x;
 
         System.out.print("Enter an integer: ");

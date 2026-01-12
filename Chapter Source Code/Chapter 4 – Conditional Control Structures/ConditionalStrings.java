@@ -1,7 +1,6 @@
 public class ConditionalStrings {
 
     public static void main(String[] args) {
-
         String r, s, t, u, v;
 
         r = "AAA";

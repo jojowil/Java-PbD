@@ -3,7 +3,6 @@ import javax.swing.JOptionPane;
 public class NumTypeGUI {
 
     public static void main(String[] args) {
-
         int x;
         String s;
         s = JOptionPane.showInputDialog("Enter an integer:");
