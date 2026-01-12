@@ -6,13 +6,10 @@ public class VectorObject {
 
     // A handful of enumerations
     public enum Coins {Penny, Nickel, Dime;}
-
     public enum Trees {Maple, Birch, Ash, Rowan;}
-
     public enum IceCream {RockyRoad, Vanilla, CrumbsAlongTheMohawk;}
 
     public static void main(String[] args) {
-
         List<Object> l;
         Vector<Object> v = new Vector<>();
 

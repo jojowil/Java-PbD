@@ -1,7 +1,6 @@
 public class Boxing {
 
     public static void main(String[] args) {
-
         int x, y;
         Integer xobj, yobj;
 

@@ -3,7 +3,6 @@ import java.util.Vector;
 public class ColorVector {
 
     public static void main(String[] args) {
-
         Vector<String> rainbow = new Vector<>();
         int x, len;
 

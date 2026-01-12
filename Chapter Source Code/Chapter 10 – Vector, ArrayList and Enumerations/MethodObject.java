@@ -11,7 +11,6 @@ public class MethodObject {
      * @param list unbounded List type
      */
     public static void checkType(List<?> list) {
-
         // use instanceof to determine type.
         if (list instanceof Vector)
             System.out.print("Vector has size " + list.size() + " and capacity " + ((Vector) list).capacity());
@@ -24,7 +23,6 @@ public class MethodObject {
     }
 
     public static void main(String[] args) {
-
         Vector<Integer> v = new Vector<>(20);
         ArrayList<Integer> a = new ArrayList<>(20);
         LinkedList<Integer> l = new LinkedList<>();

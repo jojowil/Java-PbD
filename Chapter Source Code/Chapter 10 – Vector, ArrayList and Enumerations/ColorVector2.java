@@ -5,7 +5,6 @@ public class ColorVector2 {
     enum Color {Red, Orange, Yellow, Green, Blue, Indigo, Violet}
 
     public static void main(String[] args) {
-
         Vector<Color> rainbow = new Vector<>();
         int x, len;
 
@@ -32,7 +31,7 @@ public class ColorVector2 {
             System.out.println("Value at index " + x + " is " + rainbow.get(x));
 
         System.out.println();
-        for (String s : rainbow)
-            System.out.println(s);
+        for (Color c : rainbow)
+            System.out.println(c);
     }
 }

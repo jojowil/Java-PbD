@@ -3,7 +3,6 @@ import java.util.Vector;
 public class USCoins {
 
     public enum Coins {
-
         Penny(0.01), Nickel(0.05), Dime(0.10), Quarter(0.25),
         HalfDollar(0.50);
 
@@ -29,10 +28,9 @@ public class USCoins {
     }
 
     public static void main(String[] args) {
-
         // Our pocket is a vector rather than an array.
         Vector<Coins> pocket = new Vector<>();
-        int x, numCoins, randomCoin;
+        int numCoins, randomCoin;
 
         // values() returns the enumeration as an array
         Coins[] definedCoins = Coins.values();
@@ -43,7 +41,7 @@ public class USCoins {
         System.out.printf("There are %d coins in our pocket.%n", numCoins);
 
         // add a random coin
-        for (x = 0; x < numCoins; x++) {
+        for (int x = 0; x < numCoins; x++) {
             randomCoin = (int) (Math.random() * definedCoins.length);
             pocket.add(definedCoins[randomCoin]);
         }
