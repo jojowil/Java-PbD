@@ -12,7 +12,6 @@ public class FibMemo {
      * @return int result
      */
     public static int fib(int n) {
-
         fibcalls++;
 
         if (memo.containsKey(n))

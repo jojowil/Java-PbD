@@ -7,7 +7,6 @@ public class FactorialRecurse {
      * @return int result
      */
     public static int fact(int n) {
-
         if (n < 0)
             throw new IllegalArgumentException("Value cannot be negative.");
 

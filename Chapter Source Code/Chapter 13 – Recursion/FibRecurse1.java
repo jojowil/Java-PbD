@@ -7,7 +7,6 @@ public class FibRecurse1 {
      * @return int result
      */
     public static int fib(int n) {
-
         if (n < 0)
             throw new IllegalArgumentException("Value cannot be negative.");
 

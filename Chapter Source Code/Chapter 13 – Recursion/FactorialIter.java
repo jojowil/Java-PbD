@@ -7,7 +7,6 @@ public class FactorialIter {
      * @return int result
      */
     public static int fact(int n) {
-
         int prod = 1;
 
         if (n < 0)

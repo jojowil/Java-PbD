@@ -9,7 +9,6 @@ public class FibRecurse2 {
      * @return int result
      */
     public static int fib(int n) {
-
         fibcalls++;
 
         if (n < 0)
