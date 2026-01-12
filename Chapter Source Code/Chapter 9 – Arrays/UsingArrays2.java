@@ -6,7 +6,6 @@ public class UsingArrays2 {
      * @param array integer array
      */
     public static void dumpArray(int[] array) {
-
         int x, l = array.length;
 
         System.out.print("[ ");
@@ -50,9 +49,7 @@ public class UsingArrays2 {
 
     */
 
-        int x;
-
-        for (x = pos; x < inuse - 1; x++)
+        for (int x = pos; x < inuse - 1; x++)
             array[x] = array[x + 1];
 
         return inuse - 1;
@@ -92,9 +89,7 @@ public class UsingArrays2 {
 
     */
 
-        int x;
-
-        for (x = inuse - 1; x >= pos; x--)
+        for (int x = inuse - 1; x >= pos; x--)
             array[x + 1] = array[x];
 
         array[pos] = val;
@@ -102,11 +97,11 @@ public class UsingArrays2 {
     }
 
     public static void main(String[] args) {
-
-        int x, ia[] = new int[10], inuse = ia.length;
+        int[] ia = new int[10];
+        int inuse = ia.length;
 
         // Populate array with 10 random numbers
-        for (x = 0; x < ia.length; x++)
+        for (int x = 0; x < ia.length; x++)
             ia[x] = (int) (Math.random() * 100 + 1);
 
         System.out.println("Original array.");

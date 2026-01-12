@@ -6,15 +6,13 @@ public class UsingArrays3 {
      * @param array integer array
      */
     public static void dumpArray(int[] array) {
-
-        int x, l = array.length;
+        int l = array.length;
 
         System.out.print("[ ");
-        for (x = 0; x < l - 1; x++)
+        for (int x = 0; x < l - 1; x++)
             System.out.print(array[x] + ", ");
 
         System.out.println(array[l - 1] + " ]");
-
     }
 
     /**
@@ -51,8 +49,6 @@ public class UsingArrays3 {
 
     */
 
-        int x;
-
         /* if pos is out of bounds or there are no
          * items in the array, it is an error.
          */
@@ -62,7 +58,7 @@ public class UsingArrays3 {
         // Note: if pos == inuse, no move happens.
         // Also, if pos == 0 and inuse == 1,
         // no move happens.
-        for (x = pos; x < inuse - 1; x++)
+        for (int x = pos; x < inuse - 1; x++)
             array[x] = array[x + 1];
 
         return inuse - 1;
@@ -102,8 +98,6 @@ public class UsingArrays3 {
 
     */
 
-        int x;
-
         /* if the array is exhausted, cannot extend here.
          * You can add to one past inuse, but not past the end
          * of the array.
@@ -114,7 +108,7 @@ public class UsingArrays3 {
             return -1;
 
         // Note:
-        for (x = inuse - 1; x >= pos; x--)
+        for (int x = inuse - 1; x >= pos; x--)
             array[x + 1] = array[x];
 
         array[pos] = val;
@@ -122,11 +116,11 @@ public class UsingArrays3 {
     }
 
     public static void main(String[] args) {
-
-        int x, ia[] = new int[10], inuse = ia.length, result;
+        int[] ia = new int[10];
+        int inuse = ia.length, result;
 
         // Populate array with 10 random numbers
-        for (x = 0; x < ia.length; x++)
+        for (int x = 0; x < ia.length; x++)
             ia[x] = (int) (Math.random() * 100 + 1);
 
         System.out.println("Original array.");

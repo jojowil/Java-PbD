@@ -1,8 +1,4 @@
-import java.util.Scanner;
-
 public class Array2DProc {
-
-    static Scanner kb = new Scanner(System.in);
 
     /**
      * Print the array contents.
@@ -15,7 +11,6 @@ public class Array2DProc {
             System.out.print("Values in row " + row + ": ");
             for (col = 0; col < a[row].length; col++)
                 System.out.printf("%3d ", a[row][col]);
-
             System.out.println();
         }
     }

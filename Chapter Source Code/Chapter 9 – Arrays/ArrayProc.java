@@ -10,8 +10,8 @@ public class ArrayProc {
      * @param a array of ints.
      */
     public static void printArray(int[] a) {
-        int x, len = a.length;
-        for (x = 0; x < len; x++)
+        int len = a.length;
+        for (int x = 0; x < len; x++)
             System.out.printf("Value at index %d is %d%n", x, a[x]);
     }
 

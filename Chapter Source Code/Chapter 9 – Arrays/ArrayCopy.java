@@ -25,7 +25,6 @@ public class ArrayCopy {
     }
 
     public static void main(String[] args) {
-
         int[] ia1 = new int[5];
         int[] ia2 = new int[5];
         int x;
@@ -64,6 +63,5 @@ public class ArrayCopy {
         System.out.println("\nUsing Arrays.copyOf() with ia1.length*2");
         ia2 = Arrays.copyOf(ia1, ia1.length * 2);
         printArray(ia2);
-
     }
 }

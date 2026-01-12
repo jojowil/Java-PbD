@@ -7,10 +7,9 @@ public class UsingArrays1 {
      * @return integer sum
      */
     public static int sum(int[] array) {
+        int sum = 0;
 
-        int x, sum = 0;
-
-        for ( x = 0; x < array.length; x++)
+        for (int x = 0; x < array.length; x++)
             sum = sum + array[x];
 
         return sum;
@@ -21,20 +20,18 @@ public class UsingArrays1 {
      *
      * @param array integer array
      * @param inuse number of values used
-     * @return
+     * @return integer sum
      */
     public static int sum(int[] array, int inuse) {
+        int sum = 0;
 
-        int x, sum = 0;
-
-        for ( x = 0; x < inuse; x++)
+        for (int x = 0; x < inuse; x++)
             sum = sum + array[x];
 
         return sum;
     }
 
     public static void main(String[] args) {
-
         int x, ia[] = new int[10], sum = 0, inuse = 5;
 
         // This code uses the full length of the array.
