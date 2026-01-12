@@ -105,24 +105,24 @@ public class IntDeque {
     // debug method to dump the contents of the queue to the screen
     public String toString() {
         Node p = first;
-        String s;
+        StringBuilder s;
 
-        s = "FIRST ->";
+        s = new StringBuilder("FIRST ->");
         while (p != null) {
-            s = s + " " + p.data + " ";
+            s.append(" ").append(p.data).append(" ");
             p = p.next;
         }
-        s = s + "<- LAST\n";
+        s.append("<- LAST\n");
 
-        s = s + "LAST ->";
+        s.append("LAST ->");
         p = last;
         while (p != null) {
-            s = s + " " + p.data + " ";
+            s.append(" ").append(p.data).append(" ");
             p = p.prev;
         }
-        s = s + "<- FIRST\n";
+        s.append("<- FIRST\n");
 
-        return s;
+        return s.toString();
     }
 
     // method to determine if the queue is empty.

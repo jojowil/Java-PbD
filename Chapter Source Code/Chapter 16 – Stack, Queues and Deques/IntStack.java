@@ -50,13 +50,13 @@ public class IntStack {
     // debug method to dump the contents of the stack to the screen
     public String toString() {
         Node p = top;
-        String s = "";
+        StringBuilder s = new StringBuilder();
 
         while (p != null) {
-            s = s + p.data + "\n";
+            s.append(p.data).append("\n");
             p = p.next;
         }
-        return s;
+        return s.toString();
     }
 
     // method to determine if the stack is empty.
