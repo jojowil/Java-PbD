@@ -7,10 +7,9 @@ public class PersonRecord3 {
      * @param surname   last name as a string
      * @param age       age as an int
      */
-    public record Person (String givenName, String surname, int age) { }
+    public record Person (String givenName, String surname, int age) {}
 
     public static void main(String[] args) {
-
         Person first, second;
 
         first = new Person("Bob", "Stevens", 54);

@@ -121,9 +121,7 @@ public class Person2 {
      * @return Person object as a copy of this
      */
     public Person2 getCopy() {
-        Person2 temp = new Person2(givenName, surname, age);
-
-        return temp;
+        return new Person2(givenName, surname, age);
     }
 
     @Override
@@ -137,11 +135,9 @@ public class Person2 {
      * @param args from the command line
      */
     public static void main(String[] args) {
-
         Person2 firstPerson;
         Person2 secondPerson;
         Person2 thirdPerson;
-
 
         // second person is initialized in the constructor
         secondPerson = new Person2("Bob", "Smith", 36);

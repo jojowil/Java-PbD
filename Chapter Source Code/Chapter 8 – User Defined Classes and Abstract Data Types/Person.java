@@ -115,9 +115,7 @@ public class Person {
      * @return Person object as a copy of this
      */
     public Person getCopy() {
-        Person temp = new Person(givenName, surname, age);
-
-        return temp;
+        return new Person(givenName, surname, age);
     }
 
     /**
@@ -136,7 +134,6 @@ public class Person {
      * @param args from the command line
      */
     public static void main(String[] args) {
-
         Person firstPerson;
         Person secondPerson;
         Person thirdPerson;
