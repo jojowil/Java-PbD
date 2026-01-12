@@ -15,7 +15,6 @@ public class ExceptTest {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         String s;
         int pos;
         System.out.println("\nEnter data with at least one colon:");
