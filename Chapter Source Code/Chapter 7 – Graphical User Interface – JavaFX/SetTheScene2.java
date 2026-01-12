@@ -11,7 +11,6 @@ public class SetTheScene2 extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         // all the things
         Label label;
         TextField tf;

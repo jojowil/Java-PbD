@@ -7,7 +7,6 @@ public class TestChoiceDialog extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         // array of choices
         String[] days = { "Sunday", "Monday", "Tuesday", "Wednesday",
                 "Thursday", "Friday", "Saturday" };

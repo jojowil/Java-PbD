@@ -41,7 +41,7 @@ public class ButtonCopyWithLambda extends Application {
         pane.add(btn, 1, 2);
         tfdst.setEditable(false);
 
-        // lambda expressoion where only the action is defined
+        // lambda expression where only the action is defined
         btn.setOnAction(event -> {
             String s;
             // all we do is copy the text from src to dst.

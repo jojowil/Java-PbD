@@ -16,7 +16,6 @@ public class CommonUIControls extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-
         Label label, pwl;
         TextField tf;
         Button button;

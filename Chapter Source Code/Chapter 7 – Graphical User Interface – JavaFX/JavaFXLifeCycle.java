@@ -4,7 +4,6 @@ import javafx.stage.Stage;
 
 public class JavaFXLifeCycle extends Application {
 
-
     /**
      * JavaFX Init routine. This is called before start().
      */
