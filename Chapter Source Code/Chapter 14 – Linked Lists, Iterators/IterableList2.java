@@ -27,7 +27,7 @@ public class IterableList2 implements Iterable<Integer> {
 
         // next performs the task of current from the previous version
         public boolean hasNext() {
-            return next != null ;
+            return next != null;
         }
 
         public Integer next() {
@@ -82,7 +82,7 @@ public class IterableList2 implements Iterable<Integer> {
         }
     }
 
-    public IterableList2 () {
+    public IterableList2() {
         head = null;
     }
 
@@ -93,11 +93,10 @@ public class IterableList2 implements Iterable<Integer> {
     }
 
     public void delete(int item) {
-
         Iterator<Integer> iter = iterator();
 
-        while ( iter.hasNext() )
-            if ( item == iter.next() ) {
+        while (iter.hasNext())
+            if (item == iter.next()) {
                 iter.remove();
                 break;
             }
@@ -109,17 +108,16 @@ public class IterableList2 implements Iterable<Integer> {
         Iterator<Integer> iter = iterator();
 
         // first data value is alone.
-        if ( iter.hasNext() )
+        if (iter.hasNext())
             o.append(iter.next());
         // remaining data values have ", value"
-        while ( iter.hasNext() )
+        while (iter.hasNext())
             o.append(", ").append(iter.next());
 
         return o + "]";
     }
 
     public static void main(String[] args) {
-
         IterableList2 il = new IterableList2();
 
         System.out.println("Adding values...\n" + il);
@@ -133,7 +131,7 @@ public class IterableList2 implements Iterable<Integer> {
         System.out.println(il);
 
         System.out.println("\nUsing a for-each loop to print values...");
-        for ( int i : il )
+        for (int i : il)
             System.out.println(i);
 
         // Remove a middle.
