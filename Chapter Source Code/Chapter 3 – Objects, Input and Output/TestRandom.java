@@ -3,7 +3,6 @@ import java.util.Random;
 public class TestRandom {
 
     public static void main(String[] args) {
-
         int d6, x;
         Random rnd = new Random();  // create new Random object
 
@@ -17,7 +16,5 @@ public class TestRandom {
         // uses nextInt(48) to replace (int)(Math.random() * 48)
         x = rnd.nextInt(48) + 45;
         System.out.println("x is " + x);
-
     }
-
 }

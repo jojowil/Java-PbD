@@ -1,7 +1,6 @@
 public class StringsAndChars {
 
     public static void main(String[] args) {
-
         //          0123456
         String s = "Abc-128";
         String t = "cHARLIE";

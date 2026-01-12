@@ -1,7 +1,6 @@
 public class PrintfEx {
 
     public static void main(String[] args) {
-
         String s = "Some string!";
         int x = 32, l;
         double pi = 3.14159;

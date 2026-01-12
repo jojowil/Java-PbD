@@ -59,5 +59,4 @@ public class StressRandom {
         System.out.println("Execution time in milliseconds : " +
                 timeElapsed / 1000000);
     }
-
 }

@@ -3,7 +3,6 @@ import javax.swing.JOptionPane;
 public class Perimeter {
 
     public static void main(String[] args) {
-
         String input, output;
         double length, width, perimeter;
 

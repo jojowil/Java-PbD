@@ -5,7 +5,6 @@ public class Methods {
     static Scanner kb = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         double x, y, square;
 
         System.out.println("\nThis program uses pow to demonstrate");

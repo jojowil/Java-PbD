@@ -1,7 +1,6 @@
 public class StringEx {
 
     public static void main(String[] args) {
-
         // set up some String reference vars.
         String s = "The quick brown fox jumps over the lazy dog.";
         String q, d, j;

@@ -1,7 +1,6 @@
 public class Randomness {
 
     public static void main(String[] args) {
-
         double r;
 
         // get number in the range 0 to <1.0.
