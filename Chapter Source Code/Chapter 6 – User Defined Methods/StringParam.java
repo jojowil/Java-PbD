@@ -4,7 +4,7 @@ public class StringParam {
      * Method demonstrating pass by value.
      * And String is immutable, so cannot be changed
      *
-     * @param str
+     * @param str string to be altered
      */
     public static void alterString(String str) {
         // Creates new instance. Does not replace
