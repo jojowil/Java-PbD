@@ -1,7 +1,6 @@
 public class TestGenListString {
 
     public static void main(String[] args) {
-
         GenList<String> ll = new GenList<String>();
 
         System.out.println("\nAdding Blue, Red, Orange and Green to the list");

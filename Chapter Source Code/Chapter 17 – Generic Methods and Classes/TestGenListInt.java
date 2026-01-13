@@ -1,7 +1,6 @@
 public class TestGenListInt {
 
     public static void main(String[] args) {
-
         GenList<Integer> ll = new GenList<>();
 
         System.out.println("\nAdding 35, 78, 45 and 0 to the list");

@@ -1,4 +1,4 @@
-public class Time implements Cloneable, Comparable {
+public class Time implements Cloneable, Comparable<Time> {
 
     int hours, minutes, seconds;
 
@@ -8,7 +8,7 @@ public class Time implements Cloneable, Comparable {
         seconds = sec;
     }
 
-    public Object clone() {
+    public Time clone() {
         Time dup;
         try {
             dup = (Time) super.clone();
@@ -19,9 +19,9 @@ public class Time implements Cloneable, Comparable {
         return dup;
     }
 
-    public int compareTo(Object otherTime) {
+    public int compareTo(Time otherTime) {
         int delta;
-        Time t = (Time) otherTime;
+        Time t = otherTime;
 
         delta = hours - t.hours;
         if (delta != 0)
@@ -34,8 +34,8 @@ public class Time implements Cloneable, Comparable {
         return seconds - t.seconds;
     }
 
-    public boolean equals(Object otherTime) {
-        Time t = (Time) otherTime;
+    public boolean equals(Time otherTime) {
+        Time t = otherTime;
         return hours == t.hours && minutes == t.minutes && seconds == t.seconds;
     }
 

@@ -1,7 +1,6 @@
 public class TestGenListTime {
 
     public static void main(String[] args) {
-
         GenList<Time> ll = new GenList<>();
         Time clock1 = new Time(11, 35, 0);
         Time clock2 = new Time(0, 0, 0);

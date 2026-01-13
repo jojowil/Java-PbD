@@ -58,15 +58,15 @@ public class GenQueue<T> {
     // debug method to dump the contents of the queue to the screen
     public String toString() {
         Node p = first;
-        String s;
+        StringBuilder s;
 
-        s = "FIRST ->";
+        s = new StringBuilder("FIRST ->");
         while (p != null) {
-            s = s + " " + p.data + " ";
+            s.append(" ").append(p.data).append(" ");
             p = p.next;
         }
-        s = s + "<- LAST\n";
-        return s;
+        s.append("<- LAST\n");
+        return s.toString();
     }
 
     // method to determine if the queue is empty.

@@ -43,17 +43,17 @@ public class GenList<T> {
 
     @Override
     public String toString() {
-        String o = "[";
+        StringBuilder o = new StringBuilder("[");
         Node p = head;
 
         // first data value is alone.
         if (p != null) {
-            o += p.data;
+            o.append(p.data);
             p = p.next;
         }
         // remaining data values have ", value"
         while (p != null) {
-            o += ", " + p.data;
+            o.append(", ").append(p.data);
             p = p.next;
         }
         return o + "]";

@@ -2,7 +2,7 @@ public class CloneEx2 {
 
     public static class MyClass implements Cloneable {
         String s; // immutable String
-        int ia[]; // array class object
+        int[] ia; // array class object
 
         public MyClass(String s, int len) {
             this.s = s;
@@ -14,7 +14,7 @@ public class CloneEx2 {
 
             try {
                 dup = (MyClass) super.clone();
-                dup.ia = (int[]) ia.clone();
+                dup.ia = ia.clone();
             } catch (CloneNotSupportedException e) {
                 return null;
             }
