@@ -1,7 +1,6 @@
 public class QuickSort {
 
     public static void qsort(int[] arr) {
-
         qsort1(arr, 0, arr.length - 1);
     }
 
@@ -14,12 +13,12 @@ public class QuickSort {
      * @param u   upper bound
      */
     public static void qsort1(int[] arr, int l, int u) {
-        int p, x, t;
+        int t;
 
         if (l >= u)
             return;
-        p = l; // pivot begins at lower bound
-        for (x = l + 1; x <= u; x++) {
+        int p = l; // pivot begins at lower bound
+        for (int x = l + 1; x <= u; x++) {
             if (arr[x] < arr[l]) {
                 p++;
                 // swap
@@ -41,17 +40,14 @@ public class QuickSort {
     public static void print_debug(int[] a, int l, int u, int p) {
         // Not part of sort routine.
         // Only used to print debug info!
-
         System.out.printf("l=%2d, u=%2d, p=%2d arr=", l, u, p);
-        for (int i = 0; i < a.length; i++)
-            System.out.printf("%3d", a[i]);
+        for (int j : a) System.out.printf("%3d", j);
         System.out.println();
         // end debug
     }
 
     public static void main(String[] args) {
-
-        int a[] = {2, 21, 27, 35, 10, 25, 47, 45, 37, 19, 15, 50, 16, 12, 0, 42, 44, 6, 20, 9};
+        int[] a = {2, 21, 27, 35, 10, 25, 47, 45, 37, 19, 15, 50, 16, 12, 0, 42, 44, 6, 20, 9};
 
         // this prints the indexes of the array
         System.out.print("                     ");

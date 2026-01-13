@@ -3,8 +3,7 @@ import java.util.Arrays;
 public class Mode {
 
     public static void main(String[] args) {
-
-        int x, a[] = {4, 5, 7, 8, 4, 3, 2, 8, 7, 4, 5, 7, 9, 0, 1, 2, 6, 7, 8};
+        int[] a = {4, 5, 7, 8, 4, 3, 2, 8, 7, 4, 5, 7, 9, 0, 1, 2, 6, 7, 8};
         int cur, ccount, mode = 0, mcount = 0;
 
         Arrays.sort(a);
@@ -15,13 +14,12 @@ public class Mode {
         cur = a[0];
         ccount = 1;
 
-        for (x = 1; x < l; x++) {
+        for (int x = 1; x < l; x++) {
             //System.out.println(cur + " " + a[x]);
             if (cur == a[x]) {
                 ccount++;
             } else {
                 //System.out.println(cur + " appeared " + ccount + " times.");
-
                 // set the new mode?
                 if (ccount > mcount) {
                     mode = cur;
